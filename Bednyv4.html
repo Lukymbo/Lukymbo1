@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+ <html>
+     <head>
+	 
+         <title> Bedny v4  </title>   	 
+         <meta http-equiv="content-type" content="text/html;charset=utf-8">
+		 
+		 
+
+         <style>    
+				 					
+				#penize{
+					z-index: 5;
+					position: absolute;
+					left: 138px;
+					top: 670px;
+					width: 100px;
+					height: 15px;
+					}
+
+				#text1{
+					z-index: 5;
+					position: absolute;
+					left: 0px;
+					top: 670px;
+					font-family: Verdana;
+					font-size: 14px;
+					font-weight: bold;
+					}	
+	
+				#obrz{
+					z-index: 6;
+					position: absolute;
+					left: 180px;
+					top: 100px;
+					width: 600px;
+					height: 300px;
+				}
+				#obrz1{
+					position: absolute;
+					left: 100px;
+					top: 450px;
+					z-index: 5;
+				 }
+				 
+				#obrz1:hover {
+					opacity: 0.25;
+					transition-duration: 0.5s;
+					transition-timing-function: ease-out;
+				 }
+				 #div1{
+					position: absolute;
+					left: 100px;
+					top: 450px;
+					z-index: 4;
+					font-weight: bold;
+					font-size: 20px;
+					
+					padding: 25px 20px;
+					height: 100px;
+					width: 200px;
+					
+				 }
+				 
+				 #obrz2{
+					position: absolute;
+					left: 380px;
+					top: 450px;
+					z-index: 5;
+				}
+				#obrz2:hover {
+					opacity: 0.25;
+					transition-duration: 0.5s;
+					transition-timing-function: ease-out;
+				 }
+				#div2{
+					position: absolute;
+					left: 380px;
+					top: 450px;
+					z-index: 4;
+					font-weight: bold;
+					font-size: 20px;
+					padding: 25px 20px;
+					height: 100px;
+					width: 200px;
+					
+				 }
+				 
+				 #klice2{
+					position: absolute;
+					left: 490px;
+					top: 560px;
+					z-index: 4;
+					width: 50px;
+					
+				 }
+				 #text2{
+					position: absolute;
+					left: 390px;
+					top: 560px;
+					z-index: 4;
+					font-family: Verdana;
+					font-size: 14px;
+					font-weight: bold;
+				 }
+				 #klice1{
+					position: absolute;
+					left: 210px;
+					top: 560px;
+					z-index: 4;
+					width: 50px;
+					
+				 }
+				 #text3{
+					position: absolute;
+					left: 110px;
+					top: 560px;
+					z-index: 4;
+					font-family: Verdana;
+					font-size: 14px;
+					font-weight: bold;
+				 }
+				 
+				 #tlacitko1{
+					position: absolute;
+					left: 110px;
+					top: 590px;
+					z-index: 4;
+					width: 160px;
+					height: 30px;
+				 }
+				 
+				 #tlacitko2{
+					position: absolute;
+					left: 390px;
+					top: 590px;
+					z-index: 4;
+					width: 160px;
+					height: 30px;
+				 }
+				 #tlacitko3{
+					position: absolute;
+					left: 5px;
+					top: 700px;
+					z-index: 4;
+					width: 235px;
+					height: 30px;
+				 }
+				 #tlacitko3:hover {
+					color: red;
+					transition-duration: 0.5s;
+					transition-timing-function: ease-out;
+				 }
+				 #tajnybox{
+						opacity: 0;
+						left: -100px;
+				 }
+				 
+				  #obrz3{
+					position: absolute;
+					left: 660px;
+					top: 450px;
+					z-index: 5;
+					height: 100px;
+					width: 200px;
+				}
+				#obrz3:hover {
+					opacity: 0.25;
+					transition-duration: 0.5s;
+					transition-timing-function: ease-out;
+				 }
+				#div3{
+					position: absolute;
+					left: 660px;
+					top: 450px;
+					z-index: 4;
+					font-weight: bold;
+					font-size: 20px;
+					padding: 25px 20px;
+					height: 100px;
+					width: 200px;
+					
+				 }
+				#text4{
+					position: absolute;
+					left: 665px;
+					top: 560px;
+					z-index: 4;
+					font-family: Verdana;
+					font-size: 14px;
+					font-weight: bold;
+				 }
+				 #tlacitko4{
+					position: absolute;
+					left: 670px;
+					top: 590px;
+					z-index: 4;
+					width: 160px;
+					height: 30px;
+				 }
+				 #klice3{
+					position: absolute;
+					left: 770px;
+					top: 560px;
+					z-index: 4;
+					width: 50px;
+					
+				 }
+				 #tlacitko5{
+					z-index: 5;
+					position: absolute;
+					left: 820px;
+					top: 670px;
+					width: 70px;
+					height: 30px;
+					}
+				#tlacitko6{
+					z-index: 5;
+					position: absolute;
+					left: 745px;
+					top: 670px;
+					width: 70px;
+					height: 30px;
+					}
+				#tlacitko7{
+					z-index: 5;
+					position: absolute;
+					left: 745px;
+					top: 705px;
+					width: 145px;
+					height: 30px;
+					opacity: 0;
+					}
+	     </style>
+     </head>
+     <body>
+	 
+
+			<img id="obrz" src="bedny.png" onclick="znovunacti()">
+			
+			<img id="obrz1" src="./skiny/truhla/truhla_200x100.png" onclick="bedna1()">
+			<div id="div1"> Obyčejná bedna </div>
+			<img id="obrz2" src="./skiny/krabice/krabice_200x100.png" onclick="krabice1()">
+			<div id="div2"> Žebrácká krabice </div>
+			<img id="obrz3" src="./skiny/truhla2/truhla.png" onclick="bedna2()">
+			<div id="div3"> Vylepšená bedna </div>
+								
+			<input id="penize" value="50" type="text" readonly="true">
+			<input id="klice1" value="4" type="text" readonly="true">
+			<input id="klice2" value="7" type="text" readonly="true">
+			<input id="klice3" value="7" type="text" readonly="true">
+			
+			<div id="text2"> Tvoje klíče: </div>
+			<div id="text3"> Tvoje klíče: </div>
+			<div id="text4"> Tvoje klíče: </div>
+			
+			<input type="button" onclick="info1()" id="tlacitko1" value="Šance">
+			<input type="button" onclick="info2()" id="tlacitko2" value="Šance">
+			<input type="button" onclick="info3()" id="tlacitko4" value="Šance">
+			
+			<input type="button" onclick="nuluj()" id="tlacitko3" value="Vynulovat vše">
+			<input type="button" onclick="dalsi()" id="tlacitko5" value="Další">
+			<input type="button" onclick="predchozi()" id="tlacitko6" value="Předešlé" disabled="true">
+			<input type="button" onclick="obchod()" id="tlacitko7" value="Obchod s medailemi">
+			
+			<div id="text1"> Tvoje chechtáky: </div>
+			
+			<input id="inpt" value="nezmáčknuto" type="hidden">
+			<input id="inpt0" value="nezmáčknuto" type="hidden">
+			<input id="inpt00" value="nezmáčknuto" type="hidden">
+			
+			<input id="tajnybox" oninput="tajne()" type="text">
+					
+	     <script type="text/javascript">
+		 
+			document.getElementById('tajnybox').focus();
+		 
+			var peniz = document.getElementById('penize').value;
+			var klic1 = document.getElementById('klice1').value;
+			var klic2 = document.getElementById('klice2').value;
+			var klic3 = document.getElementById('klice3').value;
+		/*	var klic4 = document.getElementById('klice4').value;
+			var klic5 = document.getElementById('klice5').value;
+			var klic6 = document.getElementById('klice6').value;*/
+			
+			var zmacknuto1 = localStorage.getItem("zmacknuto");
+			
+				document.getElementById('inpt').value = zmacknuto1;
+			
+			var zmacknuto = document.getElementById('inpt').value;
+			
+				localStorage.setItem("zmacknuto", zmacknuto);
+			
+			document.getElementById('penize').value = localStorage.getItem("penize");
+			document.getElementById('klice1').value = localStorage.getItem("klice1");
+			document.getElementById('klice2').value = localStorage.getItem("klice2");
+			document.getElementById('klice3').value = localStorage.getItem("klice3");
+		/*	document.getElementById('klice4').value = localStorage.getItem("klice4");
+			document.getElementById('klice5').value = localStorage.getItem("klice5");
+			document.getElementById('klice6').value = localStorage.getItem("klice6");*/
+			
+			window.hotovo = "ne";
+			
+			var medaile = localStorage.getItem("medaile");
+			
+			if(medaile>="1"){
+				
+				document.getElementById('tlacitko7').disabled = false;
+				
+			}
+			
+			else{ document.getElementById('tlacitko7').disabled = true;	}
+				
+			
+			if(zmacknuto=="nezmáčknuto"){
+			
+				localStorage.setItem("penize", peniz);
+				localStorage.setItem("klice1", klic1);
+				localStorage.setItem("klice2", klic2);
+				localStorage.setItem("klice3", klic3);
+				localStorage.setItem("klice4", klic4);
+				localStorage.setItem("klice5", klic5);
+				localStorage.setItem("klice6", klic6);
+			}
+			
+			function dalsi()
+			{		
+				window.open("Bedny_2.html","_self");	
+			}
+			
+			function bedna1()
+			{		
+				window.open("Bednyv3.html","_self");	
+			}
+			
+			function krabice1()
+			{			
+				window.open("Bednyv3alternativni.html","_self");
+			}
+			
+			function bedna2()
+			{		
+				window.open("Bedny_bedna.html","_self");	
+			}
+			
+			function info1()
+			{			
+				window.open("Bednyv3vysvetlivka.html","_blank");
+			}
+			
+			function info2()
+			{			
+				window.open("Bednyv3vysvetlivkaALT.html","_blank");
+			}
+			
+			function info3()
+			{			
+				window.open("Bedny_bedna_sance.html","_blank");
+			}
+			
+			function nuluj()
+			{			
+				localStorage.setItem("penize", "50");
+				localStorage.setItem("medaile", "0");
+				localStorage.setItem("klice1", "3");
+				localStorage.setItem("klice2", "5");
+				localStorage.setItem("klice3", "2");
+				localStorage.setItem("klice4", "0");
+				localStorage.setItem("klice5", "0");
+				localStorage.setItem("klice6", "0");
+				
+				document.getElementById('penize').value = localStorage.getItem("penize");
+				document.getElementById('klice1').value = localStorage.getItem("klice1");
+				document.getElementById('klice2').value = localStorage.getItem("klice2");
+				document.getElementById('klice3').value = localStorage.getItem("klice3");
+			}
+	
+				
+			function znovunacti()
+			{					
+				
+				if(window.hotovo!="ano"){
+				
+					alert("Když znovu načteš stránku a napíšeš tajný kód 'BOB' tak se něco stane");
+				}
+				
+				window.special();
+				window.specialZASE();
+				window.specialOPET();
+				window.specialZNOVU();
+				window.specialKONEC();
+			}
+			
+			function tajne()
+			{			
+				var hodnota = document.getElementById('tajnybox').value;
+
+				
+				if(hodnota=="BOB"){
+					
+					document.getElementById('obrz').src = "default-dance-lukymbo.gif";
+					
+					window.hotovo = "ano";
+					
+				}
+				
+				if(hodnota=="PENIZKY"){
+					
+					localStorage.setItem("penize", "5000");
+					localStorage.setItem("medaile", "10");
+					localStorage.setItem("klice1", "10");
+					localStorage.setItem("klice2", "10");
+					localStorage.setItem("klice3", "10");
+					localStorage.setItem("klice4", "10");
+					localStorage.setItem("klice5", "10");
+					localStorage.setItem("klice6", "10");
+					
+					document.getElementById('penize').value = localStorage.getItem("penize");
+					document.getElementById('klice1').value = localStorage.getItem("klice1");
+					document.getElementById('klice2').value = localStorage.getItem("klice2");
+					document.getElementById('klice3').value = localStorage.getItem("klice3");
+					
+				}
+			}
+			
+			function specialZASE()
+			{
+				var kontrola = document.getElementById('obrz').getAttribute("src");
+								
+				if(kontrola == "konec_opet.gif"){
+					
+					document.getElementById('obrz').src = "konec_zase.gif";
+										
+				}
+			}
+			
+			function specialZNOVU()
+			{
+				var kontrola = document.getElementById('obrz').getAttribute("src");
+
+				
+				if(kontrola == "default-dance-lukymbo.gif"){
+					
+					document.getElementById('obrz').src = "konec_znovu.gif";
+										
+				}
+			}
+			
+			function specialOPET()
+			{
+				
+				var kontrola = document.getElementById('obrz').getAttribute("src");
+				
+				if(kontrola == "konec_znovu.gif"){
+					
+					document.getElementById('obrz').src = "konec_opet.gif";
+										
+				}
+			}
+			
+			function specialKONEC()
+			{
+				var kontrola = document.getElementById('obrz').getAttribute("src");
+				
+				if(kontrola == "nic.png"){
+					
+					document.getElementById('obrz').src = "default-dance-lukymbo.gif";
+										
+				}
+			}
+			function special()
+			{
+				var kontrola = document.getElementById('obrz').getAttribute("src");
+				
+				if(kontrola == "konec_zase.gif"){
+					
+					document.getElementById('obrz').src = "nic.png";
+										
+				}
+			}
+			
+		 </script>
+     </body>
+</html>	 

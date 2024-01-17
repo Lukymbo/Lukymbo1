@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+ <html>
+     <head>
+	 
+         <title> Obchod s medailemi  </title>   	 
+         <meta http-equiv="content-type" content="text/html;charset=utf-8">
+		 
+		 
+
+         <style>    
+				 					
+				#penize{
+					z-index: 5;
+					position: absolute;
+					left: 138px;
+					top: 670px;
+					width: 100px;
+					height: 15px;
+					}
+					
+				#medaile{
+					z-index: 5;
+					position: absolute;
+					left: 123px;
+					top: 700px;
+					width: 100px;
+					height: 15px;
+					}
+					
+				#odznaky{
+					z-index: 5;
+					position: absolute;
+					left: 128px;
+					top: 730px;
+					width: 100px;
+					height: 15px;
+					}
+
+				#text1{
+					z-index: 5;
+					position: absolute;
+					left: 0px;
+					top: 670px;
+					font-family: Verdana;
+					font-size: 14px;
+					font-weight: bold;
+					}	
+	
+				#obrz1{
+					position: absolute;
+					left: 100px;
+					top: 100px;
+					z-index: 5;
+					width: 200px;
+					height: 200px;
+				 }
+				 
+				 #text2{
+					position: absolute;
+					left: 10px;
+					top: 10px;
+					z-index: 4;
+					font-family: Verdana;
+					font-size: 24px;
+					font-weight: bold;
+				 }
+
+				 #text3{
+					position: absolute;
+					left: 0px;
+					top: 730px;
+					z-index: 4;
+					font-family: Verdana;
+					font-size: 14px;
+					font-weight: bold;
+				 }
+				 
+				  #text4{
+					position: absolute;
+					left: 0px;
+					top: 700px;
+					z-index: 4;
+					font-family: Verdana;
+					font-size: 14px;
+					font-weight: bold;
+				 }			 
+
+				#tlacitko7{
+					z-index: 5;
+					position: absolute;
+					left: 745px;
+					top: 705px;
+					width: 145px;
+					height: 30px;
+					}
+	     </style>
+     </head>
+     <body>
+	 
+											
+			<input id="penize" value="50" type="text" readonly="true">
+			<input id="medaile" value="50" type="text" readonly="true">
+			<input id="odznaky" value="50" type="text" readonly="true">
+		
+			<input type="button" onclick="zpet()" id="tlacitko7" value="Hlavní menu">
+			
+			<div id="text1"> Tvoje chechtáky: </div>
+			<div id="text4"> Tvoje medaile: </div>
+			<div id="text3"> Tvoje odznaky: </div>
+			
+			<div id="text2"> Obchod s medailemi: </div>
+			
+			<div id="text5"> Koupit za medaily: </div>
+			
+			<img id="obrz1" src="./skiny/zluty_odznak.png">
+			
+			<input id="inpt" value="nezmáčknuto" type="hidden">
+			<input id="inpt0" value="nezmáčknuto" type="hidden">
+			<input id="inpt00" value="nezmáčknuto" type="hidden">
+			
+	     <script type="text/javascript">
+
+		 
+			var peniz = document.getElementById('penize').value;
+			var medail = document.getElementById('medaile').value;
+			var odznak = document.getElementById('odznaky').value;
+			
+			var zmacknuto1 = localStorage.getItem("zmacknuto");
+			
+				document.getElementById('inpt').value = zmacknuto1;
+			
+			var zmacknuto = document.getElementById('inpt').value;
+			
+				localStorage.setItem("zmacknuto", zmacknuto);
+			
+			document.getElementById('penize').value = localStorage.getItem("penize");
+			document.getElementById('medaile').value = localStorage.getItem("medaile");
+			document.getElementById('odznaky').value = localStorage.getItem("odznaky");
+			
+			function zpet()
+			{		
+				window.open("Bednyv4.html","_self");	
+			}
+			
+
+			
+		 </script>
+     </body>
+</html>	 
