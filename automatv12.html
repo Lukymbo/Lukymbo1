@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+ <html>
+     <head>
+	 
+         <title> Automat v12 </title>   	 
+         <meta http-equiv="content-type" content="text/html;charset=utf-8">
+		 
+		 
+
+         <style>    
+				#tlacitko{
+				 width: 100px;
+				 height: 50px;
+				z-index: 5;
+				position: absolute;
+					left: 250px;
+					top: 400px;
+				 }
+				 #obrz1{
+					position: absolute;
+					left: 50px;
+					top: 200px;
+			 					z-index: 5;
+				 }
+				 #obrz2{
+					position: absolute;
+					left: 250px;
+					top: 200px;
+					z-index: 5;
+				 }
+				 #obrz3{
+					position: absolute;
+					left: 450px;
+					top: 200px;
+					z-index: 5;
+				 }
+				 #obrz4{
+					position: absolute;
+					left: 0px;
+					top: 00px;
+					z-index: 1;
+
+
+				 }
+				 #obrz5{
+					position: absolute;
+					left: 250px;
+					top: 100px;
+					z-index: 6;
+										width: 200px;
+					height: 200px;
+				 }
+				 #obrz6{
+					position: absolute;
+					left: 250px;
+					top: 100px;
+					z-index: 6;
+					width: 200px;
+					height: 200px;
+				 }
+				 #tlacitko3{
+				 width: 50px;
+				 height: 50px;
+				z-index: 5;
+				position: absolute;
+					left: 360px;
+					top: 400px;
+					padding: 0;
+					white-space: nowrap;
+					}
+					#tlacitko4{
+				 width: 100px;
+				 height: 50px;
+				z-index: 5;
+				position: absolute;
+					left: 50px;
+					top: 306px;
+					}
+					#tlacitko5{
+				 width: 100px;
+				 height: 50px;
+				z-index: 5;
+				position: absolute;
+					left: 250px;
+					top: 306px;
+					}
+					#tlacitko6{
+				 width: 100px;
+				 height: 50px;
+				z-index: 5;
+				position: absolute;
+					left: 450px;
+					top: 306px;
+					}
+				#pocitanipenez{
+					z-index: 5;
+					position: absolute;
+					left: 50px;
+					top: 500px;
+					width: 100px;
+					height: 15px;
+					}
+				#babickaa{
+					z-index: 5;
+					position: absolute;
+					left: 350px;
+					top: 500px;
+					width: 200px;
+					height: 30px;
+					}
+					
+				#statistika1{
+					z-index: 5;
+					position: absolute;
+					left: 50px;
+					top: 550px;
+					width: 200px;
+					height: 30px;
+					}
+				#statistika2{
+					z-index: 5;
+					position: absolute;
+					left: 50px;
+					top: 590px;
+					width: 200px;
+					height: 30px;
+					}
+				#obrzBABA{
+					z-index: 5;
+					position: absolute;
+					left: 400px;
+					top: 520px;
+					width: 200px;
+					height: 200px;
+					opacity: 0;
+					}
+				#obrzMEDAILE{
+					z-index: 5;
+					position: absolute;
+					left: 30px;
+					top: 520px;
+					width: 200px;
+					height: 200px;
+					opacity: 0;
+					}
+				#medaile1{
+					z-index: 5;
+					position: absolute;
+					left: 50px;
+					top: 50px;
+					width: 40px;
+					height: 40px;
+					opacity: 0.2;
+					}
+				#medaile2{
+					z-index: 5;
+					position: absolute;
+					left: 50px;
+					top: 95px;
+					width: 40px;
+					height: 40px;
+					opacity: 0.3;
+					}
+				#medaile3{
+					z-index: 5;
+					position: absolute;
+					left: 50px;
+					top: 140px;
+					width: 40px;
+					height: 40px;
+					opacity: 0.2;
+					}
+				#medailee1{
+					z-index: 5;
+					position: absolute;
+					left: 250px;
+					top: 50px;
+					width: 40px;
+					height: 40px;
+					opacity: 0.2;
+					}
+				#medailee2{
+					z-index: 5;
+					position: absolute;
+					left: 250px;
+					top: 95px;
+					width: 40px;
+					height: 40px;
+					opacity: 0.3;
+					}
+				#medailee3{
+					z-index: 5;
+					position: absolute;
+					left: 250px;
+					top: 140px;
+					width: 40px;
+					height: 40px;
+					opacity: 0.2;
+					}
+				#medaile01{
+					z-index: 5;
+					position: absolute;
+					left: 450px;
+					top: 50px;
+					width: 40px;
+					height: 40px;
+					opacity: 0.2;
+					}
+				#medaile02{
+					z-index: 5;
+					position: absolute;
+					left: 450px;
+					top: 95px;
+					width: 40px;
+					height: 40px;
+					opacity: 0.3;
+					}
+				#medaile03{
+					z-index: 5;
+					position: absolute;
+					left: 450px;
+					top: 140px;
+					width: 40px;
+					height: 40px;
+					opacity: 0.2;
+					}
+				#popisky1{
+					z-index: 5;
+					position: absolute;
+					left: 50px;
+					top: 10px;
+					width: 1000px;
+					height: 35px;
+					font-family: Verdana;
+					font-size: 14px;
+					}
+				#popisky2{
+					z-index: 5;
+					position: absolute;
+					left: 250px;
+					top: 10px;
+					width: 1000px;
+					height: 35px;
+					font-family: Verdana;
+					font-size: 14px;
+					}
+				#popisky3{
+					z-index: 5;
+					position: absolute;
+					left: 450px;
+					top: 10px;
+					width: 1000px;
+					height: 35px;
+					font-family: Verdana;
+					font-size: 14px;
+					}
+				#popiskyuprvniho1{
+					z-index: 5;
+					position: absolute;
+					left: 100px;
+					top: 60px;
+					width: 1000px;
+					height: 35px;
+					font-family: Verdana;
+					font-size: 14px;
+					}
+				#popiskyuprvniho2{
+					z-index: 5;
+					position: absolute;
+					left: 100px;
+					top: 105px;
+					width: 1000px;
+					height: 35px;
+					font-family: Verdana;
+					font-size: 14px;
+					}
+				#popiskyuprvniho3{
+					z-index: 5;
+					position: absolute;
+					left: 100px;
+					top: 150px;
+					width: 1000px;
+					height: 35px;
+					font-family: Verdana;
+					font-size: 14px;
+					}
+					
+				#popiskyudruhyho1{
+					z-index: 5;
+					position: absolute;
+					left: 300px;
+					top: 60px;
+					width: 1000px;
+					height: 35px;
+					font-family: Verdana;
+					font-size: 14px;
+					}
+				#popiskyudruhyho2{
+					z-index: 5;
+					position: absolute;
+					left: 300px;
+					top: 105px;
+					width: 1000px;
+					height: 35px;
+					font-family: Verdana;
+					font-size: 14px;
+					}
+				#popiskyudruhyho3{
+					z-index: 5;
+					position: absolute;
+					left: 300px;
+					top: 150px;
+					width: 1000px;
+					height: 35px;
+					font-family: Verdana;
+					font-size: 14px;
+					}
+					
+				#popiskyutretiho1{
+					z-index: 5;
+					position: absolute;
+					left: 500px;
+					top: 60px;
+					width: 1000px;
+					height: 35px;
+					font-family: Verdana;
+					font-size: 14px;
+					}
+				#popiskyutretiho2{
+					z-index: 5;
+					position: absolute;
+					left: 500px;
+					top: 105px;
+					width: 1000px;
+					height: 35px;
+					font-family: Verdana;
+					font-size: 14px;
+					}
+				#popiskyutretiho3{
+					z-index: 5;
+					position: absolute;
+					left: 500px;
+					top: 150px;
+					width: 1000px;
+					height: 35px;
+					font-family: Verdana;
+					font-size: 14px;
+					}
+				#pohar{
+					z-index: 5;
+					position: absolute;
+					left: 50px;
+					top: 380px;
+					opacity: 0;
+					}
+				#pohar0{
+					z-index: 5;
+					position: absolute;
+					left: 450px;
+					top: 380px;
+					opacity: 0;
+					}
+					
+	     </style>
+     </head>
+     <body>
+			<img id="obrz1" src="panak_cerveny.png">
+			<img id="obrz2" src="panak_zeleny.png">
+			<img id="obrz3" src="panak_modry.png">
+			<img id="obrz4" src="default-dance-lukymbo.gif">
+			<img id="obrz5" src="jeden_dukat.png">
+			<img id="obrz6" src="nula_dukat.png">
+			<img id="obrzBABA" src="babka_2kc.png">
+			<img id="obrzMEDAILE" src="medaile_odemceni.png">
+			<img id="obrzMEDAILE" src="pohar_odemceni.png">
+			
+			<img id="medaile1" src="pohar_bronz_vyhry.png">
+			<img id="medaile2" src="pohar_stribro_vyhry.png">
+			<img id="medaile3" src="pohar_zlato_vyhry.png">
+			<img id="medailee1" src="pohar_bronz_toceni.png">
+			<img id="medailee2" src="pohar_stribro_toceni.png">
+			<img id="medailee3" src="pohar_zlato_toceni.png">
+			<img id="medaile01" src="pohar_bronz_penize.png">
+			<img id="medaile02" src="pohar_stribro_penize.png">
+			<img id="medaile03" src="pohar_zlato_penize.png">
+			<img id="pohar" src="pohar_vse.png">
+			<img id="pohar0" src="pohar_tajny.png">
+			
+			<div id="popisky1"> Medaile za výhry </div>
+			<div id="popisky2"> Medaile za točení </div>
+			<div id="popisky3"> Medaile za peníze </div>
+			
+			<div id="popiskyuprvniho1"> za 3 výhry </div>
+			<div id="popiskyuprvniho2"> za 7 výher </div>
+			<div id="popiskyuprvniho3"> za 12 výher </div>
+			
+			<div id="popiskyudruhyho1"> za 10 točení </div>
+			<div id="popiskyudruhyho2"> za 30 točení </div>
+			<div id="popiskyudruhyho3"> za 60 točení </div>
+			
+			<div id="popiskyutretiho1"> za 150 peněz </div>
+			<div id="popiskyutretiho2"> za 300 peněz </div>
+			<div id="popiskyutretiho3"> za 500 peněz </div>
+			
+			<input id="inpt" value="nezmáčknuto" type="hidden">
+			<input id="inpt0" value="nezastavil ještě" type="hidden">
+			<input id="inpt00" value="nevyhrál ještě" type="hidden">
+			<input id="inpt1" value="0" type="hidden">
+			<input id="inpt2" value="0" type="hidden">
+			<div id="statistika1"> Točil jsi již 0krát </div>
+			<div id="statistika2"> Vyhrál jsi již 0krát </div>
+			<input id="pocitanipenez" value="50">
+			
+			
+			<input type="button" onclick="intervaal()" id="tlacitko" value="Spusť">
+			<!--<button onclick="zacit()" id="tlacitko2" value="Hrát">-->
+			<!--<input type="button" onclick="znovunacti()" id="tlacitko3" value="Znovu načíst stránku">-->
+			<input type="button" onclick="prvnistop()" id="tlacitko4" value="Zastavit">
+			<input type="button" onclick="druhystop()" id="tlacitko5" value="Zastavit">
+			<input type="button" onclick="tretistop()" id="tlacitko6" value="Zastavit">
+			<input type="button" onclick="babicka()" id="babickaa" value="Říct si o nějaký ten peníz">
+			
+			<p id="vypisovani"> </p>
+			
+	     <script type="text/javascript">
+		 
+			document.getElementById('obrz4').style.opacity = 0;
+			document.getElementById('obrz5').style.opacity = 0;
+			document.getElementById('obrz6').style.opacity = 0;
+			//document.getElementById('tlacitko3').style.opacity = 0;
+			
+			
+			
+			window.napishlavnihotlacitka = document.getElementById('tlacitko').value;
+			
+			
+			var penizky = document.getElementById('pocitanipenez').value;
+			
+			var stat1 = document.getElementById('statistika1').value;
+			var stat2 = document.getElementById('statistika2').value;
+			
+			document.getElementById('statistika1').readOnly = true;
+			document.getElementById('statistika1').readOnly = true;
+			
+			function finalnitrofej()
+			{	
+				if(window.kontrolni1 == "A" && window.kontrolni2 == "A" && window.kontrolni3 == "A"
+					 && window.kontrolni4 == "A" && window.kontrolni5 == "A" && window.kontrolni6 == "A"
+					  && window.kontrolni7 =="A" && window.kontrolni8 == "A" && window.kontrolni9 == "A")
+					  
+					  {
+						document.getElementById('pohar').style.opacity = 1;
+						window.baba("pohar_odemceni.png")
+				}	
+			}
+			
+			function metalyzaprachy()
+			{	
+									var penize10 = document.getElementById('pocitanipenez').value;
+									var pomocnapromenna = penize10 * "1";
+									if(pomocnapromenna>="150" && window.kontrolni1 != "A"){document.getElementById('medaile01').style.opacity = "1";
+									window.baba("medaile_odemceni.png")
+									window.kontrolni1 = "A";
+									}
+									if(pomocnapromenna>="300" && window.kontrolni2 != "A"){document.getElementById('medaile02').style.opacity = "1";
+									window.baba("medaile_odemceni.png")
+									window.kontrolni2 = "A";
+									}
+									if(pomocnapromenna>="500" && window.kontrolni3 != "A"){document.getElementById('medaile03').style.opacity = "1";
+									window.baba("medaile_odemceni.png")
+									window.kontrolni3 = "A";
+									}
+									//Medaile za peníze
+			}
+			
+			function baba(kolik)
+			{
+				document.getElementById('obrzBABA').src = kolik;
+				setTimeout(function baba1(){document.getElementById('obrzBABA').style.opacity = 0.1;}, 0100)
+				setTimeout(function baba2(){document.getElementById('obrzBABA').style.opacity = 0.2;}, 0200)
+				setTimeout(function baba3(){document.getElementById('obrzBABA').style.opacity = 0.3;}, 0300)
+				setTimeout(function baba4(){document.getElementById('obrzBABA').style.opacity = 0.4;}, 0400)
+				setTimeout(function baba5(){document.getElementById('obrzBABA').style.opacity = 0.5;}, 0500)
+				setTimeout(function baba6(){document.getElementById('obrzBABA').style.opacity = 0.6;}, 0600)
+				setTimeout(function baba7(){document.getElementById('obrzBABA').style.opacity = 0.7;}, 0700)
+				setTimeout(function baba8(){document.getElementById('obrzBABA').style.opacity = 0.8;}, 0800)
+				setTimeout(function baba9(){document.getElementById('obrzBABA').style.opacity = 0.9;}, 0900)
+				setTimeout(function baba0(){document.getElementById('obrzBABA').style.opacity = 1;}, 1000)
+				
+				setTimeout(function baba10(){document.getElementById('obrzBABA').style.opacity = 0.9;}, 4100)
+				setTimeout(function baba20(){document.getElementById('obrzBABA').style.opacity = 0.8;}, 4200)
+				setTimeout(function baba30(){document.getElementById('obrzBABA').style.opacity = 0.7;}, 4300)
+				setTimeout(function baba40(){document.getElementById('obrzBABA').style.opacity = 0.6;}, 4400)
+				setTimeout(function baba50(){document.getElementById('obrzBABA').style.opacity = 0.5;}, 4500)
+				setTimeout(function baba60(){document.getElementById('obrzBABA').style.opacity = 0.4;}, 4600)
+				setTimeout(function baba70(){document.getElementById('obrzBABA').style.opacity = 0.3;}, 4700)
+				setTimeout(function baba80(){document.getElementById('obrzBABA').style.opacity = 0.2;}, 4800)
+				setTimeout(function baba90(){document.getElementById('obrzBABA').style.opacity = 0.1;}, 4900)
+				setTimeout(function baba00(){document.getElementById('obrzBABA').style.opacity = 0;}, 5000)
+			}
+			
+			
+			function cekej()
+			{
+				 document.getElementById("babickaa").disabled = true;
+			}
+			
+			function cekej0()
+			{
+				  document.getElementById("babickaa").disabled = false;
+			}
+			
+			function babicka()
+			{
+				 var Min00 = '1';
+				 var Max00 = '100';
+				 var Prumer00 = Math.round (Math.random() * (Max00 - Min00)  + Min00);
+				 
+				 if(Prumer00<="10"){var penize4 = document.getElementById('pocitanipenez').value;
+									var plus1 = "2";
+									var rozpocet9 = (penize4 * "1") + (plus1 * "1");
+								document.getElementById('pocitanipenez').value = rozpocet9;
+								window.cekej()
+								setTimeout(cekej0, 60000);
+								document.getElementById("tlacitko").disabled = false;
+								document.getElementById("tlacitko4").disabled = false;
+								document.getElementById("tlacitko5").disabled = false;
+								document.getElementById("tlacitko6").disabled = false;
+								window.baba("babka_2kc.png")
+								}
+								
+				if(Prumer00>"10" && Prumer00<="30"){var plus2 = "5";
+									var penize5 = document.getElementById('pocitanipenez').value;
+									var rozpocet10 = (penize5 * "1") + (plus2 * "1");
+								document.getElementById('pocitanipenez').value = rozpocet10;
+								window.cekej()
+								setTimeout(cekej0, 60000);
+								document.getElementById("tlacitko").disabled = false;
+								document.getElementById("tlacitko4").disabled = false;
+								document.getElementById("tlacitko5").disabled = false;
+								document.getElementById("tlacitko6").disabled = false;
+								window.baba("babka_5kc.png")
+								}
+								
+				if(Prumer00>"30" && Prumer00<="50"){var plus3 = "10";
+									var penize6 = document.getElementById('pocitanipenez').value;
+									var rozpocet11 = (penize6 * "1") + (plus3 * "1");
+								document.getElementById('pocitanipenez').value = rozpocet11;
+								window.cekej()
+								setTimeout(cekej0, 60000);
+								document.getElementById("tlacitko").disabled = false;
+								document.getElementById("tlacitko4").disabled = false;
+								document.getElementById("tlacitko5").disabled = false;
+								document.getElementById("tlacitko6").disabled = false;
+								window.baba("babka_10kc.png")
+								}
+								
+				if(Prumer00>"50" && Prumer00<="75"){var plus4 = "20";
+									var penize7 = document.getElementById('pocitanipenez').value;
+									var rozpocet12 = (penize7 * "1") + (plus4 * "1");
+								document.getElementById('pocitanipenez').value = rozpocet12;
+								window.cekej()
+								setTimeout(cekej0, 60000);
+								document.getElementById("tlacitko").disabled = false;
+								document.getElementById("tlacitko4").disabled = false;
+								document.getElementById("tlacitko5").disabled = false;
+								document.getElementById("tlacitko6").disabled = false;
+								window.baba("babka_20kc.png")
+								}
+								
+
+				if(Prumer00>"75" && Prumer00<="97"){var plus5 = "50";
+									var penize8 = document.getElementById('pocitanipenez').value;
+									var rozpocet13 = (penize8 * "1") + (plus5 * "1");
+								document.getElementById('pocitanipenez').value = rozpocet13;
+								window.cekej()
+								setTimeout(cekej0, 60000);
+								document.getElementById("tlacitko").disabled = false;
+								document.getElementById("tlacitko4").disabled = false;
+								document.getElementById("tlacitko5").disabled = false;
+								document.getElementById("tlacitko6").disabled = false;
+								window.baba("babka_50kc.png")
+								}
+								
+				if(Prumer00>"97"){var plus6 = "100";
+									var penize9 = document.getElementById('pocitanipenez').value;
+									var rozpocet14 = (penize9 * "1") + (plus6 * "1");
+								document.getElementById('pocitanipenez').value = rozpocet14;
+								window.cekej()
+								setTimeout(cekej0, 60000);
+								document.getElementById("tlacitko").disabled = false;
+								document.getElementById("tlacitko4").disabled = false;
+								document.getElementById("tlacitko5").disabled = false;
+								document.getElementById("tlacitko6").disabled = false;
+								window.baba("babka_100kc.png")
+								}
+								window.finalnitrofej()
+			}
+			
+			function nuladetektor()
+			{
+					var provizornipromenna = "0" * "1";
+					var penize00 = document.getElementById('pocitanipenez').value;
+					if(penize00<=provizornipromenna){
+			
+
+					document.getElementById('pocitanipenez').value = provizornipromenna;
+					alert("docházej ti prašule kámo");
+					document.getElementById("tlacitko").disabled = true;
+					document.getElementById("tlacitko4").disabled = true;
+					document.getElementById("tlacitko5").disabled = true;
+					document.getElementById("tlacitko6").disabled = true;
+					}
+					
+					window.metalyzaprachy()
+			}
+				
+				 var Min0 = '1';
+				 var Max0 = '99';
+				 var Prumer0 = Math.round (Math.random() * (Max0 - Min0)  + Min0);
+				 var Prumer1 = Math.round (Math.random() * (Max0 - Min0)  + Min0);
+				 var Prumer2 = Math.round (Math.random() * (Max0 - Min0)  + Min0);
+
+				 window.prumerrychlost0 = "0" + Prumer0;
+				 window.prumerrychlost1 = "0" + Prumer1;
+				 window.prumerrychlost2 = "0" + Prumer2;
+				 
+				/* window.hodnotatlacitka1 = document.getElementById('tlacitko4').value;
+				 window.hodnotatlacitka2 = document.getElementById('tlacitko5').value;
+				 window.hodnotatlacitka3 = document.getElementById('tlacitko6').value;  */
+				 
+
+				 
+
+			function prvnistop()
+			{
+				var kontrolkaaa = document.getElementById('inpt').value;
+				var hodnotatlacitka1 = document.getElementById('tlacitko4').value;
+				var hodnotatlacitka2 = document.getElementById('tlacitko5').value;
+				var hodnotatlacitka3 = document.getElementById('tlacitko6').value;
+				var penize1 = document.getElementById('pocitanipenez').value;
+				
+				if(kontrolkaaa=="nezmáčknuto"){window.tocitprvni = "ne";
+				document.getElementById('tlacitko4').value = "Zastaveno";
+					}
+				if(hodnotatlacitka2=="Zastavit" && hodnotatlacitka3=="Zastavit" && hodnotatlacitka1=="Zastavit"){
+
+							var minus1 = "4";
+							var rozpocet1 = (penize1 * "1") - (minus1 * "1");
+							document.getElementById('pocitanipenez').value = rozpocet1;			
+					} //Tento if odečítá peníze když zastavujete pouze jedno
+				if(hodnotatlacitka2=="Zastaveno" && hodnotatlacitka3=="Zastavit" && hodnotatlacitka1=="Zastavit"){
+
+							var minus3 = "16";
+							var rozpocet3 = (penize1 * "1") - (minus3 * "1");
+							document.getElementById('pocitanipenez').value = rozpocet3;	
+							document.getElementById("tlacitko6").disabled = true; //Toto uzamkne poslední nezmáčknuté tlačítko zastavit
+					} //Tento if odečítá peníze když zastavujete druhé
+				if(hodnotatlacitka2=="Zastavit" && hodnotatlacitka3=="Zastaveno" && hodnotatlacitka1=="Zastavit"){
+
+							var minus4 = "16";
+							var rozpocet4 = (penize1 * "1") - (minus4 * "1");
+							document.getElementById('pocitanipenez').value = rozpocet4;	
+							document.getElementById("tlacitko5").disabled = true;
+					}
+					
+				
+					window.nuladetektor()
+				
+
+			}
+			
+			function druhystop()
+			{//window.setTimeout(zapis2, 2200 );
+			var kontrolkaaaa = document.getElementById('inpt').value;
+			var hodnota0tlacitka1 = document.getElementById('tlacitko4').value;
+			var hodnota0tlacitka2 = document.getElementById('tlacitko5').value;
+			var hodnota0tlacitka3 = document.getElementById('tlacitko6').value;
+			var penize2 = document.getElementById('pocitanipenez').value;
+			
+			
+			if(kontrolkaaaa=="nezmáčknuto"){window.tocitdruhy = "ne";
+				document.getElementById('tlacitko5').value = "Zastaveno"; 
+				}
+				
+			if(hodnota0tlacitka1=="Zastavit" && hodnota0tlacitka3=="Zastavit" && hodnota0tlacitka2=="Zastavit"){
+
+							var minus2 = "4";
+							var rozpocet2 = (penize2 * "1") - (minus2 * "1");
+							document.getElementById('pocitanipenez').value = rozpocet2;			
+				}
+				
+			if(hodnota0tlacitka2=="Zastavit" && hodnota0tlacitka3=="Zastavit" && hodnota0tlacitka1=="Zastaveno"){
+
+							var minus5 = "16";
+							var rozpocet5 = (penize2 * "1") - (minus5 * "1");
+							document.getElementById('pocitanipenez').value = rozpocet5;	
+							document.getElementById("tlacitko6").disabled = true;
+					} 
+			if(hodnota0tlacitka2=="Zastavit" && hodnota0tlacitka3=="Zastaveno" && hodnota0tlacitka1=="Zastavit"){
+
+							var minus6 = "16";
+							var rozpocet6 = (penize2 * "1") - (minus6 * "1");
+							document.getElementById('pocitanipenez').value = rozpocet6;	
+							document.getElementById("tlacitko4").disabled = true;
+					}
+			window.nuladetektor()
+			
+			}
+			
+			function tretistop()
+			{//window.setTimeout(zapis3, 2200 );
+			var kontrolkaaaaa = document.getElementById('inpt').value;
+			var hodnota00tlacitka1 = document.getElementById('tlacitko4').value;
+			var hodnota00tlacitka2 = document.getElementById('tlacitko5').value;
+			var hodnota00tlacitka3 = document.getElementById('tlacitko6').value;
+			var penize3 = document.getElementById('pocitanipenez').value;
+			
+			if(kontrolkaaaaa=="nezmáčknuto"){window.tocittreti = "ne";
+				document.getElementById('tlacitko6').value = "Zastaveno"; }
+				
+			if(hodnota00tlacitka1=="Zastavit" && hodnota00tlacitka3=="Zastavit" && hodnota00tlacitka2=="Zastavit"){	
+							var minus3 = "4";
+							var rozpocet3 = (penize3 * "1") - (minus3 * "1");
+							document.getElementById('pocitanipenez').value = rozpocet3;			
+				}
+			if(hodnota00tlacitka2=="Zastavit" && hodnota00tlacitka3=="Zastavit" && hodnota00tlacitka1=="Zastaveno"){
+
+							var minus7 = "16";
+							var rozpocet7 = (penize3 * "1") - (minus7 * "1");
+							document.getElementById('pocitanipenez').value = rozpocet7;	
+							document.getElementById("tlacitko5").disabled = true; 
+					} 
+			if(hodnota00tlacitka2=="Zastaveno" && hodnota00tlacitka3=="Zastavit" && hodnota00tlacitka1=="Zastavit"){
+
+							var minus8 = "16";
+							var rozpocet8 = (penize3 * "1") - (minus8 * "1");
+							document.getElementById('pocitanipenez').value = rozpocet8;	
+							document.getElementById("tlacitko4").disabled = true;
+					}
+					window.nuladetektor()
+			}
+			
+			
+			
+			//				||window.napishlavnihotlacitka==""
+			
+			function znovunacti()
+			{location.reload();}
+
+		 
+			function intervaal()
+			{
+
+			 var vyhraluz = document.getElementById('inpt00').value;
+			 var kontrolkaa = document.getElementById('inpt0').value;
+			 var napis = document.getElementById('tlacitko').value;
+			 var kontrolka = document.getElementById('inpt').value;
+			 
+			 if(napis=="Vybrat výhru" || napis=="Pokračovat"){
+			 document.getElementById('inpt0').value = "nezastavil ještě";
+			 document.getElementById('inpt00').value = "nevyhrál ještě";
+			 //document.getElementById('inpt').value = "nezmáčknuto";
+			 document.getElementById('tlacitko').value = "Spusť";
+			 document.getElementById('obrz5').style.opacity = "0";
+			 document.getElementById('obrz6').style.opacity = "0";
+			 document.getElementById('obrz1').style.opacity = "1";
+			 document.getElementById('obrz2').style.opacity = "1";
+			 document.getElementById('obrz3').style.opacity = "1";
+			 window.tocittreti = "ano"
+			 window.tocitdruhy = "ano"
+			 window.tocitprvni = "ano"
+			 document.getElementById("tlacitko4").disabled = false;
+			 document.getElementById("tlacitko5").disabled = false;
+			 document.getElementById("tlacitko6").disabled = false;
+			 document.getElementById('tlacitko4').value = "Zastavit";
+			 document.getElementById('tlacitko5').value = "Zastavit";
+			 document.getElementById('tlacitko6').value = "Zastavit";
+			 clearInterval(window.odpocett);
+			 }
+			 
+			
+			 
+
+			 
+
+			 if(napis=="Zastavit"){setTimeout(vyhra0, 0600)
+								   document.getElementById('inpt0').value = "zastavil už";
+									document.getElementById('tlacitko').value = "Pokračovat";
+									
+									var stat01 = document.getElementById('inpt1').value;
+									var kolikrat1 = (stat01 * "1") + ("1" * "1");
+									var promenna1 = "Točil jsi již " + kolikrat1 + "krát";
+									//Toto je počítadlo
+									document.getElementById('statistika1').innerHTML = promenna1;
+									document.getElementById('inpt1').value = kolikrat1;
+									
+									if(kolikrat1>="10" && window.kontrolni4 != "A"){document.getElementById('medailee1').style.opacity = "1";
+									window.baba("medaile_odemceni.png")
+									window.kontrolni4 = "A";
+									}
+									if(kolikrat1>="30" && window.kontrolni5 != "A"){document.getElementById('medailee2').style.opacity = "1";
+									window.baba("medaile_odemceni.png")
+									window.kontrolni5 = "A";
+									}
+									if(kolikrat1>="60" && window.kontrolni6 != "A"){document.getElementById('medailee3').style.opacity = "1";
+									window.baba("medaile_odemceni.png")
+									window.kontrolni6 = "A";
+									}
+									//Medaile za točení
+									
+									clearInterval(window.odpocet);
+									}
+									
+			 if(napis=="Spusť"){document.getElementById("tlacitko6").disabled = true;
+								document.getElementById("tlacitko5").disabled = true;
+								document.getElementById("tlacitko4").disabled = true;
+								document.getElementById('tlacitko').value = "Zastavit";
+							//	document.getElementById('inpt').value = "zmáčknuto";
+								window.odpocet = setInterval(zacit, 0601);
+								document.getElementById("tlacitko").disabled = true;
+								setTimeout(function pojistka() {document.getElementById("tlacitko").disabled = false;}, 602)
+								}
+			 
+				
+					window.nuladetektor()
+					window.finalnitrofej()
+			}
+			
+			
+			
+			function vypis()
+			{
+							
+				window.polozka = [];
+		//		polozka[0] = "B";
+				polozka[1] = "panak_cerveny.png";
+				polozka[2] = "panak_zeleny.png";
+				polozka[3] = "panak_modry.png";
+				polozka[4] = "panak_zluty.png";
+			/*	polozka[5] = "F";
+				polozka[6] = "Q";
+				polozka[7] = "L"; */
+				
+				window.nahodne()
+				 
+				 //alert(window.nahodne);
+				
+		/*		
+					var zacni = '0';
+		
+				var hodnota; 
+				
+				var delka = polozka.length;
+				
+				for (hodnota = zacni; hodnota < delka; hodnota++) 
+				{// if(hodnota = '3'){var hodnota = '0'; continue}
+				
+				document.getElementById('vypisovani').innerHTML += polozka[hodnota];
+				
+				}
+         */
+				
+				
+			}
+			
+			function nahodne(){
+			
+				 var Min = '0';
+				 var Max = '100';
+				 window.nahodnee = Math.round (Math.random() * (Max - Min)  + Min); 
+				// alert(window.nahodnee);
+			
+				window.vypocitej()
+			}
+			
+			function vypocitej()
+			{
+				var promenna = window.polozka[window.nahodnee];
+			
+				if(promenna==undefined){window.nahodne()}
+				 
+				else {//document.getElementById('vypisovani').innerHTML += window.polozka[window.nahodnee];
+						
+				}
+			}
+			
+			function zacit()
+			{
+				window.odpocet0 = setInterval(vypis, 20);
+				if(window.tocitprvni!="ne"){window.setTimeout(zapis1, window.prumerrychlost0 ); }
+				if(window.tocitdruhy!="ne"){window.setTimeout(zapis2, window.prumerrychlost1 ); }
+				if(window.tocittreti!="ne"){window.setTimeout(zapis3, window.prumerrychlost2 ); }
+				setTimeout(function ukonci0() {clearInterval(window.odpocet0)}, 0050);
+
+				window.odpocet1 = setInterval(vypis, 20);
+
+			}
+			
+			function vyhra0()
+			{
+				window.odpocett = setInterval(vyhra(), 0750);
+			}
+			
+			function vyhra()
+			{
+				var okenko1 = document.getElementById("obrz1").src;
+				var okenko2 = document.getElementById("obrz2").src;
+				var okenko3 = document.getElementById("obrz3").src;
+				
+				if(okenko1==okenko2 && okenko3==okenko2 && okenko1==okenko2){
+				
+					var penize0 = document.getElementById('pocitanipenez').value;
+					var kolikrat0 = "50";
+					var rozpocet0 = (penize0 * "1") + (kolikrat0 * "1");
+					document.getElementById('pocitanipenez').value = rozpocet0;
+					
+					setTimeout(function gifzacatek() {
+						document.getElementById('obrz4').style.opacity = "1"; 
+						document.getElementById('obrz1').style.opacity = "0";
+						document.getElementById('obrz2').style.opacity = "0";
+						document.getElementById('obrz3').style.opacity = "0";
+						document.getElementById("tlacitko").disabled = true;
+						document.getElementById('tlacitko4').style.opacity = "0";
+						document.getElementById('tlacitko5').style.opacity = "0";
+						document.getElementById('tlacitko6').style.opacity = "0";
+					}, 0500 );
+					
+					setTimeout(function gifkonec() {document.getElementById('obrz4').style.opacity = "0";
+													document.getElementById("tlacitko").disabled = false;
+													document.getElementById('tlacitko4').style.opacity = "1";
+													document.getElementById('tlacitko5').style.opacity = "1";
+													document.getElementById('tlacitko6').style.opacity = "1";
+					}, 7200 );
+					document.getElementById('inpt00').value = "vyhrál už";
+					
+					var stat02 = document.getElementById('inpt2').value;
+					var kolikrat2 = (stat02 * "1") + ("1" * "1");
+					var promenna2 = "Vyhrál jsi již " + kolikrat2 + "krát";
+					//Toto je počítadlo
+					document.getElementById('statistika2').innerHTML = promenna2;
+					document.getElementById('inpt2').value = kolikrat2;
+					
+					if(kolikrat2>="3" && window.kontrolni7 != "A"){document.getElementById('medaile1').style.opacity = "1";
+					window.baba("medaile_odemceni.png")
+					window.kontrolni7 = "A";
+					}
+					if(kolikrat2>="7" && window.kontrolni8 != "A"){document.getElementById('medaile2').style.opacity = "1";
+					window.baba("medaile_odemceni.png")
+					window.kontrolni8 = "A";
+					}
+					if(kolikrat2>="12" && window.kontrolni9 != "A"){document.getElementById('medaile3').style.opacity = "1";
+					window.baba("medaile_odemceni.png")
+					window.kontrolni9 = "A";
+					}
+					//Medaile za výhry
+					
+					if(window.tocitprvni != "ne" && window.tocitdruhy != "ne" && window.tocittreti != "ne")
+						{
+							document.getElementById('pohar0').style.opacity = 1;
+							window.baba("pohar_odemceni.png")
+					}
+					
+					//Tajný pohár :)
+					}
+					else{
+							var penize = document.getElementById('pocitanipenez').value;
+							var minus = "5";
+							var rozpocet = (penize * "1") - (minus * "1");
+							document.getElementById('pocitanipenez').value = rozpocet;
+						}
+			}
+			function zapis1()
+			{
+			document.getElementById("obrz1").src = window.polozka[window.nahodnee];
+			}
+			function zapis2()
+			{
+			document.getElementById("obrz2").src = window.polozka[window.nahodnee];
+			}
+			function zapis3()
+			{
+			document.getElementById("obrz3").src = window.polozka[window.nahodnee];
+			}
+		 
+		 
+		 
+		 </script>
+     </body>
+</html>	 
