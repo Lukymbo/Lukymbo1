@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+ <html>
+     <head>
+	 
+         <title> Lukymbo.cz  </title>   	 
+         <meta http-equiv="content-type" content="text/html;charset=utf-8">
+		 
+		 <link rel="stylesheet" type="text/css" href="lukymbocz.css" /> 
+
+         <style>    
+	     </style>
+     </head>
+     <body>
+
+        <div id="HlavniDIV">
+
+           <!-- <div id="PouzivaciDIV">-->
+
+                <div id="LogovyDIV">
+                    <p id="Napis" class="Fontik">Lukymbo</p>
+                    <p id="Pripona" class="Fontik">.cz</p>
+                </div>
+                <div id="OdkazovyNadNadDIV">
+                    <div id="OdkazovyNadDIV">
+                        <div id="PopisSekceDIV" class="Fontik">
+                            <p class="PopisSekce">Moje účty:</p>
+                        </div>
+                        <div id="OdkazovyDIV">
+                            <span class="Kulaty" onclick="odkazuj(1)">
+                                <div class="KulatyANMC" style="border-color: var(--cervena)"></div>
+                                <img src="youtube_logo.jpg" class="KulatyFOTO">
+                                <p class="KulatyTEXT Fontik" style="color: var(--cervena)">Youtube</p>>
+                            </span>
+                            <span class="Kulaty" onclick="odkazuj(2)">
+                                <div class="KulatyANMC" style="border-color: var(--oranzova)"></div>
+                                <img src="instagram_logo.jpg" class="KulatyFOTO">
+                                <p class="KulatyTEXT Fontik" style="color: var(--oranzova)">Instagram</p>>
+                            </span>
+                            <span class="Kulaty" onclick="odkazuj(3)">
+                                <div class="KulatyANMC" style="border-color: var(--modra)"></div>
+                                <img src="steam_logo.jpg" class="KulatyFOTO">
+                                <p class="KulatyTEXT Fontik" style="color: var(--modra)">Steam</p>>
+                            </span>
+                            <span class="Kulaty" onclick="odkazuj(4)">
+                                <div class="KulatyANMC" style="border-color: var(--zelena)"></div>
+                                <img src="xbox_logo.jpg" class="KulatyFOTO">
+                                <p class="KulatyTEXT Fontik" style="color: var(--zelena)">Xbox</p>>
+                            </span>
+                            <span class="Kulaty" onclick="odkazuj(5)">
+                                <div class="KulatyANMC" style="border-color: var(--fialova)"></div>
+                                <img src="twitch_logo.jpg" class="KulatyFOTO">
+                                <p class="KulatyTEXT Fontik" style="color: var(--fialova)">Twitch</p>>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+           <!-- </div> -->
+            
+            <div class="SekceDIV Fontik URL2">
+                <div class="PodsekceDIV">
+                    <p class="NadpisVSekci PG">Moje programy</p>
+                    <p class="TextVSekci">Programování mě vždy bavilo a programů jsem už za ta léta vytvořil spoustu. Některé jako zadání od různých učitelů, některé jako výplod moji hlavy v nudných chvilkách...</p>
+                    <input type="button" class="PGh TlacVSekci Fontik Pravo" value="Zjisti více">
+                </div>
+            </div>
+            <div class="SekceDIV Fontik URL1">
+                <div class="PodsekceDIV">
+                    <p class="NadpisVSekci CS">Moje mapy v Counter-Striku</p>
+                    <p class="TextVSekci">CS:GO a nyní i CS2 jsou moje oblíbené hry a vždy mě tak nějak lákalo vyzkoušet si tvorbu map do této hry. To jsem po zakoupení programu za 14€ zvládl a dnes k mému jménu patří 3 celé CS:GO mapy.</p>
+                    <input type="button" class="CSh TlacVSekci Fontik Levo" value="Zjisti více">
+                </div>
+            </div>
+            <div class="SekceDIV Fontik URL3">
+                <div class="PodsekceDIV">
+                    <p class="NadpisVSekci YT" >Moje youtube videa</p>
+                    <p class="TextVSekci">Na youtube točím už od roku 2015 a stále mě to neomrzelo. Ne, že bych tedy točil nějak pravidelně nebo tak, ale zkrátka občas něco vydám. Sice nemám žádný dosah ani pořádná zhlédnutí, ale baví mě to, což je hlavní...</p>
+                    <input type="button" class="YTh TlacVSekci Fontik Pravo" value="Zjisti více">
+                </div>
+            </div>
+            <div class="SekceDIV Fontik URL4">
+                <div class="PodsekceDIV">
+                    <p class="NadpisVSekci IG">Lahodný nápoj</p>
+                    <p class="TextVSekci">Kdysi jsem bez nějakého většího úmyslu vytvořil fotku s jedním kamarádem, dal ji na instagram a dal tomu popisek "Lahodný nápoj se samotným ..." a tím nevědomky vytvořil tradici...</p>
+                    <input type="button" class="IGh TlacVSekci Fontik Levo" value="Zjisti více">
+                </div>
+            </div>
+            <div class="SekceDIV Fontik URL5">
+                <div class="PodsekceDIV">
+                    <p class="NadpisVSekci HR">Moje oblíbené hry</p>
+                    <p class="TextVSekci">Na youtube točím už od roku 2015 a stále mě to neomrzelo. Ne, že bych tedy točil nějak pravidelně nebo tak, ale zkrátka občas něco vydám. Sice nemám žádný dosah ani pořádná zhlédnutí, ale baví mě to, což je hlavní...</p>
+                    <input type="button" class="HRh TlacVSekci Fontik Pravo" value="Zjisti více">
+                </div>
+            </div>
+        </div>
+	 
+	     <script type="text/javascript">
+
+            document.getElementById("Napis").focus();
+
+            var proCSS = document.documentElement;
+
+            var jednadva = nahodny(1,100);
+            if(jednadva > 60){proCSS.style.setProperty("--hlavniBarva","rgb(204, 245, 1)");
+                        proCSS.style.setProperty("--tmavaBarva","#A0A608");
+                        proCSS.style.setProperty("--svetlaBarva","#CFD700");
+                        proCSS.style.setProperty("--napisBarva","black");
+                        proCSS.style.setProperty("--czBarva","rgb(201, 0, 0)");
+            }
+            if(jednadva > 30 && jednadva <= 60){proCSS.style.setProperty("--hlavniBarva","#002ED7");
+                        proCSS.style.setProperty("--tmavaBarva","#061F79");
+                        proCSS.style.setProperty("--svetlaBarva","#0761FF");
+                        proCSS.style.setProperty("--napisBarva","#1DDBD7");
+                        proCSS.style.setProperty("--czBarva","#047C88");
+            }
+
+            function odkazuj(cislo){ 
+
+                switch(cislo){
+                case 1: window.open("https://www.youtube.com/c/Lukymbo", '_self'); break;
+                case 2: window.open("https://www.instagram.com/lukymbo/", '_self'); break;
+                case 3: window.open("https://steamcommunity.com/id/Lukymbo/", '_self'); break;
+                case 4: window.open("https://account.xbox.com/cs-cz/Profile?xr=mebarnav&rtc=1&csrf=Rxi3ru8TG7SXY3PoSjr9_Gcz9l-bN5w9CMSXTdmI-iPyDw9D5Ds_i0E2cZ4_1j4lYAvRUwVfOjLJdIW6IulNiGvRMeU1&wa=wsignin1.0", '_self'); break;
+                case 5: window.open("https://www.twitch.tv/lukymbo/", '_self'); break;
+                case 6: window.open("https://www.instagram.com/lukymbo/", '_self'); break;
+            }}
+
+
+            var pole = []
+            var pomocnyPole = []
+            for(var yyy=1; yyy<=5; yyy++){
+                var potrebneHTML = document.getElementsByClassName("Kulaty")[yyy-1];
+                pole.push(potrebneHTML);
+                pomocnyPole.push(yyy);
+            }
+
+            console.log(pole);
+            
+            pole.forEach(function(prvek){
+                prvek.addEventListener("mouseenter", function(){
+                    var poradi = pole.indexOf(prvek);
+                    var prvekANMC = document.getElementsByClassName("KulatyANMC")[poradi];
+                    //document.getElementsByClassName("KulatyANMC")[poradi].style.animation = "toc 2s ease-in-out";
+                    if(prvekANMC.classList[1] === "KulatyANMCspoustec"){
+                        prvekANMC.classList.remove("KulatyANMCspoustec");
+                        prvekANMC.classList.add("KulatyANMCspoustec2");
+                    }
+                    else{
+                        prvekANMC.classList.remove("KulatyANMCspoustec2");
+                        prvekANMC.classList.add("KulatyANMCspoustec");
+                    }
+                })
+            })
+
+            function prinajeti(){
+                var prvek2 = document.getElementById("OdkazovyNadDIV");
+
+                var delkaUPrvku2 = prvek2.classList.length - 1;
+                console.log("1 + " + delkaUPrvku2);
+
+                if(prvek2.classList[delkaUPrvku2] != "HlavniAnimace" || !delkaUPrvku2){
+                    console.log("if"); 
+                    prvek2.classList.add("HlavniAnimace");
+                }
+               /* if(prvek2.classList[delkaUPrvku2] == "HlavniAnimace"){
+                    console.log("else");
+                    prvek2.classList.remove("HlavniAnimace");
+                }*/
+            }
+
+            window.addEventListener("scroll", prinajeti);
+
+            //prinajeti();
+   
+
+            function nahodny(minimalni, maximalni){
+
+                var Prumer = Math.round (Math.random() * (maximalni - minimalni) + minimalni) + (minimalni * 1);
+                return Prumer;
+
+            }
+
+
+		 
+		 </script>
+     </body>
+</html>	 

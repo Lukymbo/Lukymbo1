@@ -1,0 +1,361 @@
+            :root{
+                --cervena: rgb(147, 12, 12);
+                --oranzova: rgb(147, 51, 4);
+                --modra: rgb(7, 38, 197);
+                --zelena: rgb(46, 212, 4);
+                --fialova: rgb(115, 4, 212);
+
+                --programBarva: rgb(1, 111, 130);
+                --csBarva: rgb(16, 152, 54);
+                --hryBarva: rgb(184, 9, 164); 
+
+                --hlavniBarva: rgb(62, 0, 49);
+                --tmavaBarva: rgb(34, 1, 27);
+                --svetlaBarva: rgb(118, 5, 94);
+                --seda: rgb(78, 78, 76);
+                --napisBarva: rgb(219, 211, 211);
+                --czBarva: rgb(172, 57, 130);    
+            }
+            html{
+                overflow: auto;
+            }
+            body{
+                background-color: var(--hlavniBarva); /*rgb(204, 245, 1*/
+                margin: 0rem;
+               /* overflow: hidden;*/
+                height: 100%;
+                scroll-snap-type:y mandatory;
+
+                display: flex;
+                align-content: center;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                width: 100%;
+                height: 100%;
+                position: relative;
+                
+            }
+
+            #HlavniDIV{display: flex;
+                    align-content: center;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                    scroll-snap-type: mandatory;
+                    /*overflow: auto;*/
+                    
+            }
+            #PouzivaciDIV{
+                /*display: flex;
+                align-content: flex-start;
+                justify-content: center;
+                align-items: flex-start;
+                justify-items: center;
+                flex-direction: column;*/
+                width: 80%;
+                height: 100%;
+                position: relative;
+                scroll-snap-type: mandatory;
+                scroll-snap-align: start;
+                /*overflow: auto;*/
+                
+            }
+            #LogovyDIV{
+                display: flex;
+                align-items: baseline;
+                justify-items: center;
+                justify-content: center;
+                position: relative;
+                width: 80%;
+                height: 100vh;
+                scroll-snap-align: start;
+                border-color: var(--tmavaBarva);
+                border-style: dashed;
+                border-width: 5px;
+                border-top: 0;
+                border-left: 0;
+                border-right: 0;
+            }
+            #Napis{
+                text-align: center;
+                font-size: 910%;  
+                color: var(--napisBarva);
+                animation: objevse 2s;
+                padding-top: 20vh;
+            }
+            @keyframes objevse{
+                0% {opacity: 0;
+                    transform: translateY(-20px);}
+                100% {opacity: 1;}
+            }
+            .HlavniAnimace{
+                animation: objevse 2s;
+            }
+            #Pripona{
+                text-align: center;
+                font-size: 210%;  
+                color: var(--czBarva);
+                animation: cekej 3s;
+            }
+            @keyframes cekej{
+                0% {opacity: 0;}
+                80%{opacity: 0;}
+                100% {opacity: 1;}
+            }
+            #OdkazovyNadNadDIV{
+                min-height: 100vh;
+                scroll-snap-align: start;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: var(--svetlaBarva);
+            }
+            #OdkazovyNadDIV{
+                display: flex;
+                flex-direction: column;
+                justify-items: center;
+                justify-content: center;
+                align-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                background-color: var(--seda);
+                position: relative;
+                border-radius: 50px;
+                padding: 5%;
+                height: auto;
+                margin: 3rem;
+                width: 70%;
+            }
+            #OdkazovyDIV{
+                display: flex;
+                align-items: center;
+                justify-items: center;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                gap: 5vw;
+                position: relative;
+                padding: 5%;
+                width: 100%;
+            }
+            .Kulaty{
+                position: relative;
+                height: 150px;
+                width: 150px;
+                background-color: #000000;
+                border-radius: 50%;
+                overflow: hidden;
+                z-index: 6;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .KulatyFOTO:hover{
+                opacity: 0.4;
+                transition-duration: 0.5s;
+            }
+            .KulatyTEXT{
+                z-index: 5;
+                position: absolute;
+                align-self: center;
+                justify-self: center;
+                text-align: center;
+            }
+            .KulatyFOTO{
+                z-index: 6;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+            .KulatyANMC{
+                box-sizing: border-box;
+                border-top: 5px solid;
+                z-index: 7;
+                height: 100%;
+                width: 100%;
+                border-radius: 50%;
+              /*  animation: toc 3s ease-in-out;*/
+                position: absolute;
+                opacity: 0;
+                pointer-events: none;
+            }
+            .KulatyANMCspoustec{
+                animation: toc 3s ease-in-out;
+            }
+            .KulatyANMCspoustec2{ animation: toc2 3s ease-in-out;}
+            @keyframes toc {
+                0%{opacity: 0;
+                    transform: rotate(0deg);}
+                10%{opacity: 1;}
+                90%{opacity: 1;}
+                100%{transform: rotate(-360deg);
+                    opacity: 0;}
+            }
+            @keyframes toc2 {
+                0%{opacity: 0;
+                    transform: rotate(0deg);}
+                10%{opacity: 1;}
+                90%{opacity: 1;}
+                100%{transform: rotate(-360deg);
+                    opacity: 0;}
+            }
+            .PopisSekce{
+                font-size: 544%;
+                display: inline;
+            }
+            #PopisSekceDIV{
+                padding-left: 15vh;
+                padding-right: 5vh;
+                border-style: solid;
+                border-top: 0;
+                border-right: 0;
+                border-left: 0;
+                color: var(--napisBarva);
+                border-color: var(--napisBarva);
+            }
+            .SekceDIV{
+                height: 100vh;
+                width: 100%;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                scroll-snap-align: start;
+            }
+            .SekceDIV::before{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 102%;
+                height: 102%;
+                filter: blur(3px);
+                background-position: center;
+                background-size: cover;
+                
+            }
+            .SekceDIV::after{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-position: center;
+                background-size: cover;
+                opacity: 0.1;
+                pointer-events: none;
+            }
+            .URL1::before{
+                background-image: url("csmapa_pozadi.jpg");}
+            .URL1::after{
+                background-color: var(--csBarva);}
+            .URL2::before{
+                background-image: url("programovani2_pozadi.jpg");}
+            .URL2::after{
+                background-color: var(--programBarva);}
+            .URL3::before{
+                background-image: url("youtube_pozadi.jpg");}
+            .URL3::after{
+                background-color: rgb(160, 11, 11);}
+            .URL4::before{
+                background-image: url("lahodnynapoj_pozadi.jpg");}
+            .URL4::after{
+                background-color: rgb(184, 99, 9);}
+            .URL5::before{
+                background-image: url("rdr_pozadi.jpg");}
+            .URL5::after{
+                background-color: var(--hryBarva);}
+            .SekceDIV > .PodsekceDIV{
+                width: 70%;
+                background-color: #000000;
+                opacity: 0.7;
+                padding: 1rem;
+                display: flex;
+                flex-direction: column;
+                border-radius: 2rem;
+            }
+            .NadpisVSekci{
+                color: white;
+                font-size: 410%;  
+                margin: 2rem;
+                margin-bottom: 1rem;
+                padding-bottom: 1rem;
+                border-bottom: 2px;
+                border-style: dashed;
+                border-color: white;
+                border-top: 0;
+                border-right: 0;
+                border-left: 0;
+            }
+            .TextVSekci{
+                color: white;
+                font-size: 150%; 
+                margin: 2rem;
+                margin-top: 1rem;
+            }
+            .TlacVSekci{ 
+                font-size: 280%;
+                margin-bottom: 1rem;
+                margin-right: 2rem;
+                margin-left: 2rem;
+                border-radius: 1rem;
+                border-width: 0;
+                padding: 0.5rem;
+            }
+            .Pravo{
+                align-self: flex-end;
+            }
+            .Levo{
+                align-self: flex-start;
+            }
+            .TlacVSekci:hover{
+                transition-duration: 1s;
+                padding: 0.8rem;
+                color: white;
+                opacity: 1;
+            }
+            .TlacVSekci:not(:hover){
+                transition-duration: 1s;
+            }
+            .Fontik{
+                font-weight: bold;
+                font-style: normal;  
+                font-variant: small-caps;
+                font-family: "Trebuchet MS"; 
+            }
+            /*.ObrzVSekci{
+                background-color: #0baf96;
+                background-image: url("csmapa_pozadi.jpg");
+                background-position: center;
+                background-size: cover;
+                width: 100%;
+                height: 100%;
+                position: fixed;
+                filter: blur(2px);
+            }*/
+            .YT{
+                color: var(--cervena)
+            }
+            .YTh:hover{background-color: var(--cervena);}
+            .CS{
+                color: var(--csBarva);
+            }
+            .CSh:hover{background-color: var(--csBarva);}
+            .IG{
+                color: var(--oranzova);
+            }
+            .IGh:hover{background-color: var(--oranzova);}
+            .PG{
+                color: var(--programBarva);
+            }
+            .PGh:hover{background-color: var(--programBarva);}
+            .HR{
+                color: var(--hryBarva);
+            }
+            .HRh:hover{background-color: var(--hryBarva);}
