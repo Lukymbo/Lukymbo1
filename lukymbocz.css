@@ -256,15 +256,15 @@
             .URL1::after{
                 background-color: var(--csBarva);}
             .URL2::before{
-                background-image: url("programovani2_pozadi.jpg");}
+                background-image: url("programovani2_pozadi.JPG");}
             .URL2::after{
                 background-color: var(--programBarva);}
             .URL3::before{
-                background-image: url("youtube_pozadi.jpg");}
+                background-image: url("youtube_pozadi.JPG");}
             .URL3::after{
                 background-color: rgb(160, 11, 11);}
             .URL4::before{
-                background-image: url("lahodnynapoj_pozadi.jpg");}
+                background-image: url("lahodnynapoj_pozadi.JPG");}
             .URL4::after{
                 background-color: rgb(184, 99, 9);}
             .URL5::before{
