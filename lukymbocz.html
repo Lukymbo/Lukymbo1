@@ -15,10 +15,31 @@
         <div id="HlavniDIV">
 
            <!-- <div id="PouzivaciDIV">-->
-
+                <div id="NavigacniDIV">
+                    <div id="NavigacniLogoDIV">
+                        <p class="Fontik BarvaNapisu">Lukymbo</p>
+                        <p id="" class="Fontik BarvaCz">.cz</p>
+                    </div>
+                    <div id="NavigacniKlikaciDIV"> 
+                        <p class="NavigacniMoznost Fontik">Domů</p>
+                        <p class="NavigacniMoznost Fontik">Programy</p>
+                        <p class="NavigacniMoznost Fontik">Videa</p>
+                        <p class="NavigacniMoznost Fontik">Videa</p>
+                        <p class="NavigacniMoznost Fontik">Videa</p>
+                    </div>    
+                </div>
+                <input type="button" id="NavigacniTlac">
                 <div id="LogovyDIV">
-                    <p id="Napis" class="Fontik">Lukymbo</p>
-                    <p id="Pripona" class="Fontik">.cz</p>
+                    <div id="BarvaDIV">
+                        <div class="BarvaPodDIV" onclick="zmenbarvu('0')"><div id="Fialovy" class="Barva Fialovy"></div></div>
+                        <div class="BarvaPodDIV" onclick="zmenbarvu(1)"><div id="Zluty" class="Barva Zluty"></div></div>
+                        <div class="BarvaPodDIV" onclick="zmenbarvu(2)"><div class="Barva Modry"></div></div>
+                        <div class="BarvaPodDIV" onclick="zmenbarvu(3)"><div class="Barva Vychozi Fontik">?</div></div>
+                    </div>
+                    <div id="LogovyPodDIV">
+                        <p id="Napis" class="Fontik BarvaNapisu">Lukymbo</p>
+                        <p id="Pripona" class="Fontik BarvaCz">.cz</p>
+                    </div>
                 </div>
                 <div id="OdkazovyNadNadDIV">
                     <div id="OdkazovyNadDIV">
@@ -97,21 +118,106 @@
 
             document.getElementById("Napis").focus();
 
+            var prvky = document.getElementsByClassName("BarvaPodDIV");
+                console.log(prvky);
+            var poleProBarvy = [];
+
+            for(var iii=0; iii<4; iii++){
+              //  prvky[iii].addEventListener("click", zcervenej);
+                poleProBarvy.push(prvky[iii]);
+            }
+            /*function zcervenej(){
+                var poradi = prvky.indexOf
+            }*/
+
+          /*  poleProBarvy.forEach(function(prvek){
+                prvek.addEventListener("click", function(){
+                    var poradi = poleProBarvy.indexOf(prvek);
+                    var ktery;
+                    switch(poradi){
+                        case 0: ktery = "F";
+                        case 1: ktery = "Z";
+                        case 2: ktery = "M";
+                        case 3: ktery = "N";
+                        default: ktery = "N";
+                    }
+                    localStorage.setItem("barva", ktery);
+                    rozhodni();   
+                })
+            })*/
+            function zmenbarvu(poradii){
+                var kteryy;
+                if(poradii=='0'){kteryy = "F";}
+                if(poradii==1){kteryy = "Z";}
+                if(poradii==2){kteryy = "M";}
+                if(poradii==3){kteryy = "N";}
+                localStorage.setItem("barva", kteryy);
+                rozhodni(); 
+                console.log(kteryy);
+            }
+
             var proCSS = document.documentElement;
 
-            var jednadva = nahodny(1,100);
-            if(jednadva > 60){proCSS.style.setProperty("--hlavniBarva","rgb(204, 245, 1)");
-                        proCSS.style.setProperty("--tmavaBarva","#A0A608");
-                        proCSS.style.setProperty("--svetlaBarva","#CFD700");
-                        proCSS.style.setProperty("--napisBarva","black");
-                        proCSS.style.setProperty("--czBarva","rgb(201, 0, 0)");
+            var lokalnii = localStorage.getItem("barva");
+
+            if(!lokalnii){
+                localStorage.setItem("barva", "N");
+                document.getElementsByClassName("BarvaPodDIV")[3].style.borderColor = "darkred";
+                rozhodni();
+            }console.log(lokalnii);
+
+            rozhodni();
+
+            function rozhodni(){
+
+                var lokalni = localStorage.getItem("barva");
+
+                if(lokalni=="F"){FFF(); vyklikni(0);
+                    document.getElementsByClassName("BarvaPodDIV")[0].style.borderColor = "darkred"; }
+                if(lokalni=="M"){MMM(); vyklikni(2);
+                    document.getElementsByClassName("BarvaPodDIV")[2].style.borderColor = "darkred"; }
+                if(lokalni=="Z"){ZZZ(); vyklikni(1);
+                    document.getElementsByClassName("BarvaPodDIV")[1].style.borderColor = "darkred"; }
+                if(lokalni=="N"){ vyklikni(3);
+                var jednadva = nahodny(1,100);
+                    if(jednadva > 60){ZZZ();}
+                    if(jednadva > 30 && jednadva <= 60){MMM();}
+                    if(jednadva <= 30){FFF();}
+                    document.getElementsByClassName("BarvaPodDIV")[3].style.borderColor = "darkred";
+                }
             }
-            if(jednadva > 30 && jednadva <= 60){proCSS.style.setProperty("--hlavniBarva","#002ED7");
-                        proCSS.style.setProperty("--tmavaBarva","#061F79");
-                        proCSS.style.setProperty("--svetlaBarva","#0761FF");
-                        proCSS.style.setProperty("--napisBarva","#1DDBD7");
-                        proCSS.style.setProperty("--czBarva","#047C88");
+            function FFF(){
+                proCSS.style.setProperty("--hlavniBarva","rgb(62, 0, 49)");
+                proCSS.style.setProperty("--tmavaBarva","rgb(34, 1, 27)");
+                proCSS.style.setProperty("--svetlaBarva","rgb(118, 5, 94)");
+                proCSS.style.setProperty("--napisBarva","rgb(219, 211, 211)");
+                proCSS.style.setProperty("--czBarva","rgb(172, 57, 130)");
             }
+            function MMM(){
+                proCSS.style.setProperty("--hlavniBarva","#002ED7");
+                proCSS.style.setProperty("--tmavaBarva","#061F79");
+                proCSS.style.setProperty("--svetlaBarva","#0761FF");
+                proCSS.style.setProperty("--napisBarva","#1DDBD7");
+                proCSS.style.setProperty("--czBarva","#047C88");
+            }
+            function ZZZ(){
+                proCSS.style.setProperty("--hlavniBarva","rgb(204, 245, 1)");
+                proCSS.style.setProperty("--tmavaBarva","#A0A608");
+                proCSS.style.setProperty("--svetlaBarva","#CFD700");
+                proCSS.style.setProperty("--napisBarva","black");
+                proCSS.style.setProperty("--czBarva","rgb(201, 0, 0)");
+            }
+            function vyklikni(cislo){
+                for(var iii=0; iii < 4; iii++){
+                    if(iii!=cislo){
+                        document.getElementsByClassName("BarvaPodDIV")[iii].style.borderColor = "var(--seda)";
+                        console.log(iii);
+                    }
+                    
+                }
+            }
+
+            
 
             function odkazuj(cislo){ 
 
@@ -170,6 +276,26 @@
             window.addEventListener("scroll", prinajeti);
 
             //prinajeti();
+
+            var navigovaciPrvek = document.getElementById("NavigacniTlac");
+            var nagicniDiv = document.getElementById("NavigacniDIV");
+
+            nagicniDiv.style.display = "none";
+
+            navigovaciPrvek.addEventListener("click", navigace);
+
+            function navigace(){
+
+                var zobrazen = nagicniDiv.style.display;
+
+                if(zobrazen == "flex"){
+                    nagicniDiv.style.display = "none";
+                }
+                else{
+                    nagicniDiv.style.display = "flex";
+                    document.querySelector("html").scrollTop = "0";
+                }
+            }
    
 
             function nahodny(minimalni, maximalni){

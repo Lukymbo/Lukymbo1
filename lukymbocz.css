@@ -18,6 +18,7 @@
             }
             html{
                 overflow: auto;
+                scroll-behavior: smooth;
             }
             body{
                 background-color: var(--hlavniBarva); /*rgb(204, 245, 1*/
@@ -64,14 +65,81 @@
                 /*overflow: auto;*/
                 
             }
-            #LogovyDIV{
+            #NavigacniDIV{
                 display: flex;
+                align-items: center;
+                justify-items: center;
+                justify-content: flex-start;
+                flex-wrap: nowrap;
+                position: relative;
+                width: 85%;
+                min-height: 5rem;
+                scroll-snap-align: start;
+                background-color: var(--svetlaBarva);
+                margin: 1rem;
+                margin-right: 7rem;
+                border-radius: 1rem;
+                padding: 0.5rem;
+                overflow: visible;
+            }
+            #NavigacniTlac{
+                height: 8vh;
+                width: 8vh;
+                background-color: black;
+                border-width: 0;
+                position: fixed;
+                background-image: url("carky.jpg");
+                background-size: cover;
+                right: 2rem;
+                top: 2rem;
+                z-index: 10;
+            }
+            #NavigacniLogoDIV{
+                display: flex;
+                font-size: 240%;
+                border-color: #000000;
+                border-style: dashed;
+                border-top: 0;
+                border-bottom: 0;
+                border-left: 0;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            #NavigacniKlikaciDIV{
+                display: flex;
+                justify-content: space-evenly;
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 100%;
+                padding-right: 5%;
+                overflow: visible;
+                gap: 1rem;
+            }
+            #NavigacniKlikaciDIV > p{
+                color: var(--napisBarva);
+                font-size: 251%;
+                
+            }
+            #NavigacniKlikaciDIV > p:hover{
+                color: var(--czBarva);
+                
+            }
+
+            #LogovyDIV{
+               /* display: flex;
                 align-items: baseline;
                 justify-items: center;
-                justify-content: center;
+                justify-content: center;*/
+                display: grid;
+                grid-template-columns: 20vw 15vw 30vw 15vw 20vw;
+                grid-template-rows: 25vh 50vh 25vh;
+                gap: 1rem;
+                align-items: center;
+                justify-content: start;
+                justify-items: start;
                 position: relative;
-                width: 80%;
-                height: 100vh;
+                width: 100%;
+                min-height: 100vh;
                 scroll-snap-align: start;
                 border-color: var(--tmavaBarva);
                 border-style: dashed;
@@ -80,12 +148,59 @@
                 border-left: 0;
                 border-right: 0;
             }
+            #LogovyPodDIV{
+                display: flex;
+                align-items: baseline;
+                grid-column-start: 3;
+                grid-column-end: 3;
+                grid-row-start: 2;
+                grid-row-end: 2;
+                width: 100%;
+                justify-content: center;
+                justify-self: start;
+            }
+            #BarvaDIV{
+                flex-direction: row;
+                display: flex;
+                grid-row-start: 3;
+                grid-row-end: 3;
+                grid-column-start: 1;
+                grid-column-end: 2;
+                padding: 1rem;
+                margin-left: 1rem;
+            }
+            .BarvaPodDIV{
+                width: 2rem;
+                height: 2rem;
+                position: relative;
+                margin-inline: 0.5rem;
+                border-style: solid;
+                border-width: 3px;
+                border-color: var(--seda);
+                overflow: hidden;
+            }
+            .Barva{
+                width: 100%;
+                height: 100%;
+            }
+            .Barva::after{
+                transform: rotate(45deg) translateX(75%) scale(150%);
+                content: "";
+                width: 2rem;
+                height: 2rem;
+                position: absolute;
+            }
             #Napis{
                 text-align: center;
                 font-size: 910%;  
-                color: var(--napisBarva);
                 animation: objevse 2s;
-                padding-top: 20vh;
+                pointer-events: none;
+            }
+            .BarvaNapisu{
+                color: var(--napisBarva);
+            }
+            .BarvaCz{
+                color: var(--czBarva);
             }
             @keyframes objevse{
                 0% {opacity: 0;
@@ -98,7 +213,7 @@
             #Pripona{
                 text-align: center;
                 font-size: 210%;  
-                color: var(--czBarva);
+                pointer-events: none;
                 animation: cekej 3s;
             }
             @keyframes cekej{
@@ -208,7 +323,7 @@
                 display: inline;
             }
             #PopisSekceDIV{
-                padding-left: 15vh;
+                padding-left: 5vh;
                 padding-right: 5vh;
                 border-style: solid;
                 border-top: 0;
@@ -256,22 +371,22 @@
             .URL1::after{
                 background-color: var(--csBarva);}
             .URL2::before{
-                background-image: url("programovani2_pozadi.JPG");}
+                background-image: url("programovani2_pozadi.jpg");}
             .URL2::after{
                 background-color: var(--programBarva);}
             .URL3::before{
-                background-image: url("youtube_pozadi.JPG");}
+                background-image: url("youtube_pozadi.jpg");}
             .URL3::after{
                 background-color: rgb(160, 11, 11);}
             .URL4::before{
-                background-image: url("lahodnynapoj_pozadi.JPG");}
+                background-image: url("lahodnynapoj_pozadi.jpg");}
             .URL4::after{
                 background-color: rgb(184, 99, 9);}
             .URL5::before{
                 background-image: url("rdr_pozadi.jpg");}
             .URL5::after{
                 background-color: var(--hryBarva);}
-            .SekceDIV > .PodsekceDIV{
+            .PodsekceDIV{
                 width: 70%;
                 background-color: #000000;
                 opacity: 0.7;
@@ -279,6 +394,12 @@
                 display: flex;
                 flex-direction: column;
                 border-radius: 2rem;
+            }
+            @media (max-width: 600px){
+                .PodsekceDIV{
+                    height: 90%;
+                    background-color: blue;
+                }
             }
             .NadpisVSekci{
                 color: white;
@@ -339,23 +460,27 @@
                 position: fixed;
                 filter: blur(2px);
             }*/
-            .YT{
-                color: var(--cervena)
-            }
+            .YT{ color: var(--cervena)}
             .YTh:hover{background-color: var(--cervena);}
-            .CS{
-                color: var(--csBarva);
-            }
+            .CS{color: var(--csBarva);}
             .CSh:hover{background-color: var(--csBarva);}
-            .IG{
-                color: var(--oranzova);
-            }
+            .IG{color: var(--oranzova); }
             .IGh:hover{background-color: var(--oranzova);}
-            .PG{
-                color: var(--programBarva);
-            }
+            .PG{ color: var(--programBarva); }
             .PGh:hover{background-color: var(--programBarva);}
-            .HR{
-                color: var(--hryBarva);
-            }
+            .HR{color: var(--hryBarva);}
             .HRh:hover{background-color: var(--hryBarva);}
+
+            .Modry::after{background-color: #002ED7;}
+            .Modry{background-color: #0761FF;}
+            .Zluty::after{background-color: rgb(204, 245, 1);}
+            .Zluty{background-color: #CFD700;}
+            .Fialovy::after{background-color: rgb(62, 0, 49);}
+            .Fialovy{background-color: rgb(118, 5, 94);}
+            .Vychozi{background-color: var(--svetlaBarva);
+                    text-align: center;
+                    font-size: 170%;
+                    pointer-events: none;
+                    user-select: none;
+            }
+            
