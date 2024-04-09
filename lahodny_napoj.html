@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+ <html>
+     <head>
+	 
+         <title> Lukymbo.cz  </title>   	 
+         <meta http-equiv="content-type" content="text/html;charset=utf-8">
+		 
+		 <link rel="stylesheet" type="text/css" href="lukymbocz.css" /> 
+
+         <style>    
+	     </style>
+     </head>
+     <body>
+
+        <div id="HlavniDIV" style="background-color: black;">
+
+           <!-- <div id="PouzivaciDIV">-->
+                <div id="NavigacniDIV">
+                    <div id="NavigacniLogoDIV">
+                        <p class="Fontik BarvaNapisu">Lukymbo</p>
+                        <p id="" class="Fontik BarvaCz">.cz</p>
+                    </div>
+                    <div id="NavigacniKlikaciDIV"> 
+                        <p class="NavigacniMoznost Fontik">Domů</p>
+                        <p class="NavigacniMoznost Fontik">Programy</p>
+                        <p class="NavigacniMoznost Fontik">Videa</p>
+                        <p class="NavigacniMoznost Fontik">Videa</p>
+                        <p class="NavigacniMoznost Fontik">Videa</p>
+                    </div>    
+                </div>
+                <input type="button" id="NavigacniTlac">
+
+                <div class="URL4 SekceDIV Fontik">
+                    <div class="UvodniDIV">
+                        <p id="" class="NadpisVSekci NadpisVelikost IG">Lahodný nápoj</p>
+                        <p id="" class="TextVSekci TextVelikost">Kdysi jsem bez nějakého většího úmyslu vytvořil fotku s jedním kamarádem, dal ji na instagram a dal tomu popisek "Lahodný nápoj se samotným ..." a tím nevědomky vytvořil tradici.</p>
+                    </div>
+                   <!-- <div class="UvodniDIV">
+                        <p id="" class="TextVSekci TextVelikost">Kdysi jsem bez nějakého většího úmyslu vytvořil fotku s jedním kamarádem, dal ji na instagram a dal tomu popisek "Lahodný nápoj se samotným ..." a tím nevědomky vytvořil tradici.</p>
+                    </div> -->
+                </div>
+                <div id="NaTextDIV">
+                    <div class="ZuzenyDIV Fontik">
+                        <p class="ZuzenyNadpis NadpisVelikost NadpisVSekci">Můj instagram</p>
+                        <p class="ZuzenyText TextVelikost">Nikdy jsem neplánoval vytvořit si z mého instagramu místo kam budu dávat mnoho fotek. Dokonce už ani nevím proč jsem si instgram založil, snad kvůli kamarádovi z páté třídy, nebo možná jen ze zvědavosti, doopravdy nevím.</p>
+                        <p class="ZuzenyText TextVelikost">Mám za to, že můj původní instagramový účet neměl snad ani jednu fotku, dokonce ani tu profilovou. To bylo zřejmě kvůli tomu, že jsem instagram takřka ihned po založení účtu přestal používat. To však nemělo dlouhému trvání, jelikož zhruba do dvou let jsem si založil účet nový.</p>
+                        <p class="ZuzenyText TextVelikost">Na tento nový účet jsem nejdříve dával jen náhodné fotky co jsem vyfotil. Zhruba polovinu z nich jsem časem smazal. Ne, že by mi teda záleželo na tom co si o tom lidí myslí, ale například mi časem prostě přišlo blbý fotit na svůj instagram našeho králíka.</p>
+                        <p class="ZuzenyText TextVelikost">Toto období trvalo až do července 2019, kdy jsem přestal instagram používat a úplně ho odstranil ze svého mobilu. Zpátky se mi tam vrátil až v září 2021 když jsem si všimnul, že ho používá skoro každý kolem mě.</p>
+                        <p class="ZuzenyText TextVelikost">Tím začalo moje moderní obodbí používání instagramu. Od té doby jsem tam dával výhradně fotky na kterých jsem já (s jednou výjimkou fotky sbírky plechovek). Staré fotky jsem nemazal, protože jsem si vždy říkal, že je lepší se tomu zasmát a nijak zvlášť mi nevadilo, že to uvidí ostatní. Ze stejného důvodu jsem si nikdy nedal soukromý účet. Zkrátka jsem vždy chtěl být viděn.</p>
+                        <p class="ZuzenyText TextVelikost">Potom jsem jednou vyfotil fotku s kamarádem v tančeních s pivem, pojmenoval ji "Lahodný nápoj se samotným Běhym" a nahrál ji na instagram. Po půl roce tanečních jsme to zopakovali a udělali druhou verzi. Postupně jsem pak začal "Lahodný nápoj" fotit s víc a víc kamarádama.</p>
+                        <p class="ZuzenyText TextVelikost">Teď je můj účet primárně jen na "Lahodné nápoje" a doufám že to jednou vyfotím s kžadým koho mám rád.</p>
+                        <input type="button" class="ZuzenyTlac Bila TlacVSekci Fontik Pravo" value="Přejít na instagram">
+                    </div>
+                    <div class="ZuzenyDIV Fontik MinimalniVyska">
+                        <p class="ZuzenyNadpis NadpisVelikost NadpisVSekci">Přehled všech fotek</p>
+                        <div class="ZobrazeniDIV">
+                            <span class="TextVelikost" id="SKym">Lahodný nápoj se samotným Běhym</span>
+                        </div>
+                        <div class="ZuzenyPodDIV">
+                            <input type="button" class="ZuzenyPodTlac TlacLevo" onclick="dalsifoto('-')">
+                            <div class="ZuzenyFotoDIV">
+                                <img src="./foto/lahodny_napoj/LN_1_Behy.jpeg" class="ZuzenyFoto"></div>
+                            <input type="button" class="ZuzenyPodTlac TlacPravo" onclick="dalsifoto('+')">
+                        </div>
+                        <div class="ZobrazeniDIV"> 
+                            <span class="Bila">Režim zobrazení:</span>
+                            <input type="button" class="ZobrazeniTlac Bila" value="STEJNÉ" onclick="rezim('S')">
+                            <input type="button" class="ZobrazeniTlac Bila" value="PŮVODNÍ" onclick="rezim('P')">
+                        </div>
+                        <div class="ZobrazeniDIV">
+                            <input type="button" class="ZuzenyTlac Bila TlacVSekci Fontik ZuzenyTlacVelikost" value="Otevřít na Instagramu" onclick="prejdinafoto()">
+                            <input type="button" class="ZuzenyTlac Bila TlacVSekci Fontik ZuzenyTlacVelikost" value="Najet na" onclick="prejdinafotonastrance()">
+                        </div>
+                    </div>
+                    <div id="FotkovyDIV"></div>
+                </div>
+        </div>
+
+        <script type="text/javascript" src="lukymbocz.js"></script>
+	 
+	     <script type="text/javascript">
+
+            const vsechnyfotky = ["./foto/lahodny_napoj/LN_1_Behy.jpeg", "./foto/lahodny_napoj/LN_2_Behy.jpeg",
+            "./foto/lahodny_napoj/LN_3_Peter.jpeg", "./foto/lahodny_napoj/LN_4_Pavel.jpeg","./foto/lahodny_napoj/LN_5_Boby.jpeg",
+            "./foto/lahodny_napoj/LN_6_Burt_Hons.jpeg","./foto/lahodny_napoj/LN_7_Majkl.jpeg","./foto/lahodny_napoj/LN_8_Mrtafa.jpeg",
+            "./foto/lahodny_napoj/LN_9_Pavel.jpeg","./foto/lahodny_napoj/LN_10_Prazak.jpeg","./foto/lahodny_napoj/LN_11_Cernoch.jpeg",
+            "./foto/lahodny_napoj/LN_12_Ada.jpeg","./foto/lahodny_napoj/LN_13_Mrtafa.jpeg","./foto/lahodny_napoj/LN_14_Kata.jpeg",
+            "./foto/lahodny_napoj/LN_15_Verca_Nasta.jpeg","./foto/lahodny_napoj/LN_16_Sedivy.jpeg","./foto/lahodny_napoj/LN_17_Adam.jpeg",
+            "./foto/lahodny_napoj/LN_18_Matej.jpeg","./foto/lahodny_napoj/LN_19_Tonda.jpeg","./foto/lahodny_napoj/LN_20_Pepa.jpeg",
+            "./foto/lahodny_napoj/LN_21_Sedlova.jpeg","./foto/lahodny_napoj/LN_22_Dzamila_Peter.jpeg","./foto/lahodny_napoj/LN_23_Simon.jpeg",
+            "./foto/lahodny_napoj/LN_24_Baron_Rosta.jpeg","./foto/lahodny_napoj/LN_25_Cimny.jpeg"]
+
+            const vsechnyodkazy = ["https://www.instagram.com/p/CUf-h25Icvp/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==","https://www.instagram.com/p/CcLqD_KIvTx/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==","https://www.instagram.com/p/Cci3yqZIim5/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==","https://www.instagram.com/p/Cd5u9SxIxg7/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==","https://www.instagram.com/p/CeosYdVo8_O/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==","https://www.instagram.com/p/Ce9Fyk9og2J/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==","https://www.instagram.com/p/CjVy5DPI7Ma/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==","https://www.instagram.com/p/CpnqEdwo2XU/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==","https://www.instagram.com/p/CqDvNNqILHS/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==","https://www.instagram.com/p/CtuLV3rIPDr/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==","https://www.instagram.com/p/CtuMJh1ojYy/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==","https://www.instagram.com/p/Ct95qT6oo9E/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==","https://www.instagram.com/p/Ct_8sikIKu4/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==","https://www.instagram.com/p/CvJBp03oaq7/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==","https://www.instagram.com/p/CvNnj1LoGfG/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==","https://www.instagram.com/p/CvcaWz5Ib0G/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==","https://www.instagram.com/p/CvkquxJoFSD/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==","https://www.instagram.com/p/CwYPAqdIwyE/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==","https://www.instagram.com/p/CxdgzVkI7gt/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==","https://www.instagram.com/p/CxvmIqXI4CX/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==","https://www.instagram.com/p/Cxx9kS7IsyF/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==","https://www.instagram.com/p/CyWbyNpI3rr/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==","https://www.instagram.com/p/C2D1xDmChgJ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==","https://www.instagram.com/p/C2lAETMihtW/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==","https://www.instagram.com/p/C3JXpd9I6EV/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="]
+            
+            const vsechnynadpisy = ["Lahodný nápoj se samotným Běhym 1.0","Lahodný nápoj se samotným Běhym 2.0","Lahodný nápoj se samotným Peterem","Lahodný nápoj se samotným Pavlem 1.0","Lahodný nápoj se samotným Bobym","Lahodný nápoj se samotným Honsem a Burtem","Lahodný nápoj se samotným Majklem","Lahodný nápoj se samotným Mrťafou 1.0","Lahodný nápoj se samotným Pavlem 2.0","Lahodný nápoj se samotným Pražákem","Lahodný nápoj se samotným Černochem","Lahodný nápoj se samotnou Áďou","Lahodný nápoj se samotným Mrťafou 2.0","Lahodný nápoj se samotnou Káťou","Lahodný nápoj se samotnou Verčou a Nasťou","Lahodný nápoj se samotným Šedivcem","Lahodný nápoj se samotným Adamem","Lahodný nápoj se samotným Matějem","Lahodný nápoj se samotným Tondou","Lahodný nápoj se samotným Pepou","Lahodný nápoj se samotnou Šédlovou","Lahodný nápoj se samotným Peterem a Džamilou", "Lahodný nápoj se samotným Šimonem","Lahodný nápoj se samotným Rosťou a Baronem","Lahodný nápoj se samotným Čimnym"]
+
+            const vsechnypopisy = ["První lahodný nápoj vznikl náhodným vyfocením se na tanečních. Nebylo tím nic zamýšleno, prostě jsme to vyfotili","Kvůli covidu byl závěr tanečních odložen a my si vzpomněli jak jsme kdysi vyfotil fotku, kterou jsme pak pojmenovali Lahodný nápoj... a rozhodli se ji zopakovat.","Druhý kdo si se mnou vyfotil Lahodný nápoj byl Peter. Bylo to tenkrát u něj doma když jsem tam přespával a dělali jsme si domáci pizzu.","Během mistrovství světa v hokeji 2022, kdy jsem koukal na každý zápas, jsem sháněl někoho kdo by mohl přijít na sledování zápasu. Jediný kdo šel byl Pavel, dali jsme si pivo a fotka byla na světě.","Další fotka vznikla když mě náhodně vytáhli kamarádi ven do lesa. Cestou jsme šli kolem hospody a stavili se tam na jedno rychlé pivko. No a protože s Bobym ještě fotka nebyla, tak jsme ji vytvořili.", "Tato fotka vznikla na druhé chatě u Boba. Tedy u příležitosti, která se rozhodně musela zdokumnetovat. A když už jsem byl u toho nevěděl jsem kdo bude ideálnější pro fotku, tak jsem se vyfotil s oběma.","Potom jsem chtěl do sbírky přidat Majkla. Nejlepší příležitost pro to byla jednou když jsme byli na buřtech. Jde o jedinou fotku, kde je pivo v plechovkách.","Tato fotka vznikla když nás Mrťafa pozval do hospody abychom se se seznámili s jeho přítelkyní. Dodnes podle mého nejhezčí fotka ze všech.","Tato fotka vznikla když jsme s Pavlem zašli hned po škole na jedno pivko a stejně jako u předchozí fotky s ním, byl jediný kdo se mnou šel. Za to si vysloužil druhou fotku.","Tahle fotka vznikla když jsem byl náhodně pozván do hospody s Pražákem, Černochem a Baronem.","Tato fotka vznikla ve stejnou chvíli jako předchozí, což porušilo moje pravidla pro tyto fotky. Přistoupil jsem na to nakonec hlavně kvůli tomu, že Černocha bych jen tak asi neulovil znovu.","Tento lahodná nápoj už byl plánován dlouho a nakonec vznikl při historicky prvním pivu naší budoucí party. ","Tahle fotka vznikla v Děčínské restauraci U Pekaře. Tam jsme byli již o rok dřív avšak pivo jsme si tam dát nemohli neboť nám nebylo 18. Nyní jsme si po roce vítězně jedno dopřáli.","Tahle fotka vznikla v Budapešti. zašli jsme tam do nějaké náhodné restaurace a když se nás číšník zeptal odkud jsme, řekli jsme mu z České republiky na což na nás pronesl maďarským přízvukem 'Na zdraví!'","Tato fotka vznikla protože jsem nevěděl zda se dřív vyfotit s Nasťou nebo Verčou nebo snad s někým jiným. možností bylo tehdá asi pět, protože skoro s nikým z nich jsem fotku neměl. Když se tedy rozhodlo a přešlo na focení, bylo vyfoceno asi 30 fotek a stejně se nenašla žádná, kterou by obě dvě schválili. Tak jsem prostě rozhodl já.","Tahle fotka nebyla ani plánovaná, Tomáš na mě prostě na mekáčovské letní akci vytáhl, že sním ještě žádnou nemám a tak se šlo fotit. Za mě velmi povedený kousek.","V dobu vzniku téhle fotky už jsem s Adamem byl na pivu spoustakrát, ale vždy se fotilo s někmý jiným. Teď už konečně přišel čas na něj. Bylo to na Rychtě, kde pivo stálo 57Kč, tedy asi o 15Kč více než jinde.","Nejvzácnější úlovek, který asi mám. Vyfoceno to bylo na chatě u Verči, tedy na poslední akci kde jsem viděl Matěje pít. Od té doby sice byl i u mě na chatě, ale alkoholu se de facto nedotkl.","Tento počin vznikl krátce poté co Tonda přišel do naší třídy. Znal jsem ho sice už asi o měsíc dřív, ale na pivu jsme byli asi jen tady. Tenkrát jsme jich dali 6 a další den šli do školy.","Tohle je jedna z těch horších fotek. Museli jsme se totiž vyfotit sami, což nikdy nedopadá dobře. Jinak, ale obyčejná návštěva ve Vozejku na standartní 3 pivka.","U mě na chatě s mekáčem musela nějaká ta fotka vzniknout. Jediný kdo mi do mé sbírky z návštěvníků chyběl byla Verča Šédlová. Tak bylo jasno, jen fotka není nic moc.","Chvíli po předchozí byla chata u mě znovu, tentokrát s prdama. Tam byli mimo jiné i ženy. Jedou z nich právě Džamila. Pochopitelně byl čas i na novější fotku s Peterem a tak vznikla fotka s oběma.","Když už jsem měl fotku s mnoha kamarády musel jsem mít i tu s tím opravdu dlouholetým kamarádem. Takže jsem byl velmi potěšen když Šimon na jeho vlastním maturáku souhlasil. Pro mě to byl první maturák a i díky tomuhle skvělý maturák.","Chvíli na to byl další maturák ,kde jsem konečně přidal do sbírky i Barona, s kterým jsem předtím pil už několirát, ale nikdy neměl příležitost fotku vyfotit. K tomu se přidal i Rosťa, kterého také rád v kolekci vidím.","Čimny byl někdo koho bych nikdy ve sbírce nečekal. Na našem maturáku jsme dle předchozí domluvi však tohle zorganizovali a parádně pokecali."]
+
+            const vsechnydatumy = [new Date(2021,9,1), new Date(2022,3,10), new Date(2022,3,19), new Date(2022,4,23), new Date(2022,5,10), new Date(2022,5,18), new Date(2022,9,5), new Date(2023,2,10), new Date(2023,2,21), new Date(2023,5,20), new Date(2023,5,20), new Date(2023,5,26), new Date(2023,5,27), new Date(2023,6,26), new Date(2023,6,27), new Date(2023,7,2), new Date(2023,7,5), new Date(2023,7,25), new Date(2023,8,21), new Date(2023,8,28), new Date(2023,8,29), new Date(2023,9,13), new Date(2024,0,14), new Date(2024,0,26), new Date(2023,1,9)]
+
+            const pocetvsechfotek = vsechnyfotky.length;
+
+            const obrazek = document.getElementsByClassName("ZuzenyFoto")[0];
+            const s_kym = document.getElementById("SKym");
+            let aktualni_foto = localStorage.getItem("LahodnyFoto");
+
+            if(!aktualni_foto){
+                aktualni_foto = 1;
+                localStorage.setItem("LahodnyFoto", 1);
+                }
+
+            function dalsifoto(smer){
+                if(smer=="+"){
+                    if(aktualni_foto >= pocetvsechfotek){aktualni_foto = 1;}
+                    else{aktualni_foto++;}
+                }
+                if(smer=="-"){
+                    if(aktualni_foto <= 1){aktualni_foto = pocetvsechfotek;}
+                    else{aktualni_foto = aktualni_foto - 1;}
+                }
+                localStorage.setItem("LahodnyFoto", aktualni_foto);
+
+                console.log(aktualni_foto);
+
+                vykreslifoto();
+            }
+
+            function vykreslifoto(){
+                obrazek.src = vsechnyfotky[aktualni_foto-1];
+                s_kym.innerHTML = vsechnynadpisy[aktualni_foto-1];
+            } vykreslifoto();
+           
+
+
+            let aktualni_rezim = localStorage.getItem("LahodnyFotoRezim");
+
+            if(!aktualni_rezim){
+                aktualni_rezim = "S";
+                localStorage.setItem("LahodnyFotoRezim", "S");
+                }
+
+            const tlacitko1 = document.getElementsByClassName("ZobrazeniTlac")[0];
+            const tlacitko2 = document.getElementsByClassName("ZobrazeniTlac")[1];
+
+            function rezim(ktery){
+
+                if(ktery != aktualni_rezim){
+                    aktualni_rezim = ktery;
+                    localStorage.setItem("LahodnyFotoRezim", ktery);
+                    vykreslirezim();
+                }
+                
+            }
+            function vykreslirezim(){
+                if(aktualni_rezim == "S"){
+                    obrazek.style.height = "60vh";
+                    obrazek.style.width = "60vh";
+
+                    tlacitko2.style.color = null;
+                    tlacitko2.style.borderColor = null;
+
+                    tlacitko1.style.color = "black";
+                    tlacitko1.style.borderColor = "black";
+                }
+                if(aktualni_rezim == "P"){
+                    obrazek.style.height = "auto";
+                    obrazek.style.width = "auto";
+
+                    tlacitko1.style.color = null;
+                    tlacitko1.style.borderColor = null;
+
+                    tlacitko2.style.color = "black";
+                    tlacitko2.style.borderColor = "black";
+                }
+            }
+            vykreslirezim();
+
+            function prejdinafoto(){
+                window.open(vsechnyodkazy[aktualni_foto-1], '_self');
+            }
+            function prejdinafotonastrance(){
+                let kam = "FotkaDIV" + aktualni_foto;
+                document.getElementById(kam).scrollIntoView();
+                //alert(document.getElementById(kam));
+            }
+
+            ridicipanel();
+
+            function ridicipanel(){
+
+                for(let i = 0; i < pocetvsechfotek; i++){
+                    stvor1(i);
+                    stvor2(i);
+                    stvor4(i);
+                    stvor3(i);
+                    stvor7(i);
+                    stvor5(i);
+                    stvor6(i);
+                }
+
+            }
+            function stvor1(cislofotky){
+
+                let pocetproid = "FotkaDIV" + (cislofotky + 1); 
+
+                let ulozsem = document.getElementById("FotkovyDIV");
+
+                let novydiv = document.createElement("div");
+
+                    if(!lichesude(cislofotky)){
+                        novydiv.style.backgroundColor = "black";
+                        novydiv.style.borderColor = "var(--oranzova)";
+                        novydiv.style.flexDirection = "row-reverse";
+                    }
+
+                    novydiv.id = pocetproid;
+
+                    novydiv.classList.add("FotoDIV");
+                    novydiv.classList.add("Fontik");
+
+                ulozsem.appendChild(novydiv);
+            }
+
+            function stvor2(cislofotky){
+
+                let pocetproid = "Fotka" + (cislofotky + 1);
+
+                let kam = "FotkaDIV" + (cislofotky + 1);
+                    let ulozsem = document.getElementById(kam);
+
+                let novyimg = document.createElement("img");
+
+                    novyimg.src = vsechnyfotky[cislofotky];
+                        
+                    if(!lichesude(cislofotky)){
+                        novyimg.style.transform = /*"/*translateX(20vw)*/ "rotate(5deg)";
+                    }
+
+                    novyimg.id = pocetproid;
+
+                    novyimg.classList.add("Fotka");
+
+                ulozsem.appendChild(novyimg);
+                
+            }
+            function stvor3(cislofotky){
+
+                let pocetproid = "FotkaNadpis" + (cislofotky + 1);
+
+                let kam = "FotkaPodDIV" + (cislofotky + 1);
+                    let ulozsem = document.getElementById(kam);
+
+                let novyp = document.createElement("p");
+
+                    novyp.innerHTML = vsechnynadpisy[cislofotky];
+                        
+                    if(!lichesude(cislofotky)){
+                       // novyp.style.transform = "translateX(20vw) rotate(5deg)";
+                    }
+
+                    novyp.id = pocetproid;
+
+                    novyp.classList.add("FotkaNadpis");
+
+                ulozsem.appendChild(novyp);
+                
+            }
+            function stvor4(cislofotky){
+
+                let pocetproid = "FotkaPodDIV" + (cislofotky + 1);
+
+                let kam = "FotkaDIV" + (cislofotky + 1);
+                    let ulozsem = document.getElementById(kam);
+
+                let novydiv = document.createElement("div");
+
+                    //novyp.innerHTML = vsechnynadpisy[cislofotky];
+                        
+                    if(!lichesude(cislofotky)){
+                       // novyp.style.transform = "translateX(20vw) rotate(5deg)";
+                    }
+
+                    novydiv.id = pocetproid;
+
+                    novydiv.classList.add("FotkaPodDIV");
+
+                ulozsem.appendChild(novydiv);
+                
+            }
+            function stvor5(cislofotky){
+
+                let pocetproid = "FotkaPopis" + (cislofotky + 1);
+
+                let kam = "FotkaPodDIV" + (cislofotky + 1);
+                    let ulozsem = document.getElementById(kam);
+
+                let novyp = document.createElement("p");
+
+                    novyp.innerHTML = vsechnypopisy[cislofotky];
+                        
+                    if(!lichesude(cislofotky)){
+                       novyp.style.color = "var(--oranzova)";
+                    }
+
+                    novyp.id = pocetproid;
+
+                    novyp.classList.add("FotkaPopis");
+
+                ulozsem.appendChild(novyp);
+                
+            }
+            function stvor6(cislofotky){
+
+                let pocetproid = "FotkaTlac" + (cislofotky + 1);
+
+                let kam = "FotkaPodDIV" + (cislofotky + 1);
+                    let ulozsem = document.getElementById(kam);
+
+                let novyinput = document.createElement("input");
+
+                    novyinput.type = "button";
+                    novyinput.value = "Otevřít na instagramu"
+                   /* novyinput.setAttribute("onclick", function(){
+                        window.open(vsechnyodkazy[cislofotky],"_self");
+                    });*/
+                    novyinput.onclick = function(){ window.open(vsechnyodkazy[cislofotky],"_self");};
+                        
+                    if(!lichesude(cislofotky)){
+                       // novyp.style.transform = "translateX(20vw) rotate(5deg)";
+                    }
+
+                    novyinput.id = pocetproid;
+
+                    novyinput.classList.add("ZuzenyTlac");
+                    novyinput.classList.add("ZuzenyTlacVelikost");
+                    novyinput.classList.add("Bila");
+                    novyinput.classList.add("TlacVSekci");
+                    novyinput.classList.add("Fontik");
+
+                ulozsem.appendChild(novyinput);
+                
+            }
+            function stvor7(cislofotky){
+
+                let pocetproid = "FotkaDatum" + (cislofotky + 1);
+                
+                let kam = "FotkaPodDIV" + (cislofotky + 1);
+                    let ulozsem = document.getElementById(kam);
+
+                let novyp = document.createElement("p");
+
+
+                    novyp.innerHTML = new Intl.DateTimeFormat('cs-cz'/*, {weekday:"full"}*/).format(vsechnydatumy[cislofotky]);
+                    novyp.style.margin = 0;
+                    
+                    if(!lichesude(cislofotky)){
+                        novyp.style.color = "var(--oranzova)";
+                    }
+
+                    novyp.id = pocetproid;
+
+                    novyp.classList.add("FotkaDatum");
+                    novyp.classList.add("Bila");
+                    novyp.classList.add("Fontik");
+
+                ulozsem.appendChild(novyp);
+            }
+
+
+            function lichesude(cislo){
+                if(cislo % 2 == 1){
+                    return 1;}
+                else{return 0;}
+            }
+            
+		 </script>
+         
+     </body>
+</html>	 
