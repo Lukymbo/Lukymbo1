@@ -81,7 +81,7 @@
                 <div class="PodsekceDIV">
                     <p class="NadpisVSekci NadpisVelikost PG">Moje programy</p>
                     <p class="TextVSekci TextVelikost">Programování mě vždy bavilo a programů jsem už za ta léta vytvořil spoustu. Některé jako zadání od různých učitelů, některé jako výplod moji hlavy v nudných chvilkách...</p>
-                    <input type="button" class="PGh TlacVSekci Fontik Pravo" value="Zjisti více">
+                    <input type="button" class="PGh TlacVSekci Fontik Pravo" value="Zjisti více" onclick="prejdi(1)">
                 </div>
             </div>
             <div class="SekceDIV Fontik URL1">
@@ -267,7 +267,8 @@
             function prejdi(cislo){
                 let kam;
                 switch(cislo){
-                    case 4: kam =  "lahodny_napoj.html";
+                    case 1: kam = "programy.html"; break;
+                    case 4: kam =  "lahodny_napoj.html"; break;
                 }
                 window.open(kam, "_self")
             }

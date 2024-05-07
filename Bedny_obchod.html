@@ -51,8 +51,8 @@
 					left: 100px;
 					top: 100px;
 					z-index: 5;
-					width: 200px;
-					height: 200px;
+					width: 800px;
+					height: 400px;
 				 }
 				 
 				 #text2{
@@ -93,6 +93,20 @@
 					width: 145px;
 					height: 30px;
 					}
+				#tlacitko8{
+					z-index: 5;
+					position: absolute;
+					left: 423px;
+					top: 550px;
+					width: 145px;
+					height: 30px;
+					}
+				#obrz2{
+					position: absolute;
+					z-index: 6;
+					width: 300px;
+					height: 150px;
+				 }
 	     </style>
      </head>
      <body>
@@ -101,18 +115,18 @@
 			<input id="penize" value="50" type="text" readonly="true">
 			<input id="medaile" value="50" type="text" readonly="true">
 			<input id="odznaky" value="50" type="text" readonly="true">
+			
+			<img id="obrz2" src="./skiny/obchod/ruka_s_medaili.png">
 		
 			<input type="button" onclick="zpet()" id="tlacitko7" value="Hlavní menu">
+			<input type="button" onclick="darovat()" id="tlacitko8" value="Darovat medaili">
 			
 			<div id="text1"> Tvoje chechtáky: </div>
 			<div id="text4"> Tvoje medaile: </div>
 			<div id="text3"> Tvoje odznaky: </div>
 			
-			<div id="text2"> Obchod s medailemi: </div>
 			
-			<div id="text5"> Koupit za medaily: </div>
-			
-			<img id="obrz1" src="./skiny/zluty_odznak.png">
+			<img id="obrz1" src="./skiny/obchod/obchod.gif">
 			
 			<input id="inpt" value="nezmáčknuto" type="hidden">
 			<input id="inpt0" value="nezmáčknuto" type="hidden">
@@ -121,7 +135,7 @@
 	     <script type="text/javascript">
 
 		 
-			var peniz = document.getElementById('penize').value;
+		/*	var peniz = document.getElementById('penize').value;
 			var medail = document.getElementById('medaile').value;
 			var odznak = document.getElementById('odznaky').value;
 			
@@ -132,16 +146,123 @@
 			var zmacknuto = document.getElementById('inpt').value;
 			
 				localStorage.setItem("zmacknuto", zmacknuto);
-			
+			*/
 			document.getElementById('penize').value = localStorage.getItem("penize");
 			document.getElementById('medaile').value = localStorage.getItem("medaile");
 			document.getElementById('odznaky').value = localStorage.getItem("odznaky");
+			
+			document.getElementById('obrz2').style.opacity = 0;
+			document.getElementById('obrz2').style.left = "300px";
+			document.getElementById('obrz2').style.top = "360px";
 			
 			function zpet()
 			{		
 				window.open("Bednyv4.html","_self");	
 			}
 			
+			function darovat()
+			{
+				document.getElementById('obrz2').style.opacity = 0.2;
+				window.setTimeout(dar1, 100);
+			}
+			function dar1()
+			{	document.getElementById('obrz2').style.opacity = 0.3;
+				document.getElementById('obrz2').style.left = "310px";
+				document.getElementById('obrz2').style.top = "350px";
+				window.setTimeout(dar2, 100);
+			}
+			function dar2()
+			{	document.getElementById('obrz2').style.opacity = 0.4;
+				document.getElementById('obrz2').style.left = "320px";
+				document.getElementById('obrz2').style.top = "340px";
+				window.setTimeout(dar3, 100);
+			}
+			function dar3()
+			{	document.getElementById('obrz2').style.opacity = 0.5;
+				document.getElementById('obrz2').style.left = "330px";
+				document.getElementById('obrz2').style.top = "330px";
+				window.setTimeout(dar4, 100);
+			}
+			function dar4()
+			{	document.getElementById('obrz2').style.opacity = 0.6;
+				document.getElementById('obrz2').style.left = "340px";
+				document.getElementById('obrz2').style.top = "320px";
+				window.setTimeout(dar5, 100);
+			}
+			function dar5()
+			{	document.getElementById('obrz2').style.opacity = 0.7;
+				document.getElementById('obrz2').style.left = "350px";
+				document.getElementById('obrz2').style.top = "310px";
+				window.setTimeout(dar6, 100);
+			}
+			function dar6()
+			{	document.getElementById('obrz2').style.opacity = 0.8;
+				document.getElementById('obrz2').style.left = "360px";
+				document.getElementById('obrz2').style.top = "300px";
+				window.setTimeout(dar7, 100);
+			}
+			function dar7()
+			{	document.getElementById('obrz2').style.opacity = 0.9;
+				document.getElementById('obrz2').style.left = "370px";
+				document.getElementById('obrz2').style.top = "290px";
+				window.setTimeout(dar8, 100);
+			}
+			function dar8()
+			{	document.getElementById('obrz2').style.opacity = 1;
+				document.getElementById('obrz2').style.left = "380px";
+				document.getElementById('obrz2').style.top = "280px";
+				window.setTimeout(dar9, 100);
+			}
+			function dar9()
+			{
+				document.getElementById('obrz2').style.left = "390px";
+				document.getElementById('obrz2').style.top = "270px";
+				window.setTimeout(dar10, 100);
+			}
+			function dar10()
+			{
+				document.getElementById('obrz2').style.left = "400px";
+				document.getElementById('obrz2').style.top = "260px";
+				window.setTimeout(dar11, 100);
+			}
+			function dar11()
+			{
+				document.getElementById('obrz2').style.left = "410px";
+				document.getElementById('obrz2').style.top = "250px";
+				window.setTimeout(dar12, 100);
+			}
+			function dar12()
+			{
+				document.getElementById('obrz2').style.left = "420px";
+				document.getElementById('obrz2').style.top = "240px";
+				window.setTimeout(dar13, 100);
+			}
+			function dar13()
+			{
+				document.getElementById('obrz2').style.left = "430px";
+				document.getElementById('obrz2').style.top = "230px";
+				window.setTimeout(dar14, 300);
+			}
+			function dar14()
+			{	document.getElementById('obrz2').style.opacity = 0.8;
+				window.setTimeout(dar15, 100);
+			}
+			function dar15()
+			{	document.getElementById('obrz2').style.opacity = 0.6;
+				window.setTimeout(dar16, 50);
+			}
+			function dar16()
+			{	document.getElementById('obrz2').style.opacity = 0.4;
+				window.setTimeout(dar17, 50);
+			}
+			function dar17()
+			{	document.getElementById('obrz2').style.opacity = 0.2;
+				window.setTimeout(dar18, 50);
+			}
+			function dar18()
+			{	document.getElementById('obrz2').style.opacity = 0;
+				
+			}
 
 			
 		 </script>

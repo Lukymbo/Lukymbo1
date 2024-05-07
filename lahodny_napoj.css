@@ -17,10 +17,8 @@
                 --czBarva: rgb(172, 57, 130);    
             }
             html{
-                overflow-y: scroll;
-                overflow-x: hidden;
+                overflow: auto;
                 scroll-behavior: smooth;
-                scroll-snap-type: y proximity;
             }
             body{
                 background-color: var(--hlavniBarva); /*rgb(204, 245, 1*/
@@ -323,7 +321,6 @@
             .PopisSekce{
                 font-size: 544%;
                 display: inline;
-                
             }
             #PopisSekceDIV{
                 padding-left: 5vh;
@@ -336,7 +333,7 @@
                 border-color: var(--napisBarva);
             }
             .SekceDIV{
-                min-height: 100vh;
+                height: 100vh;
                 width: 100%;
                 position: relative;
                 display: flex;
@@ -344,7 +341,6 @@
                 align-items: center;
                 overflow: hidden;
                 scroll-snap-align: start;
-                flex-direction: column;
             }
             .SekceDIV::before{
                 content: "";
@@ -407,6 +403,7 @@
             }
             .NadpisVSekci{
                 color: white;
+                font-size: 410%;  
                 margin: 2rem;
                 margin-bottom: 1rem;
                 padding-bottom: 1rem;
@@ -417,18 +414,11 @@
                 border-right: 0;
                 border-left: 0;
             }
-            .NadpisVelikost{
-                font-size: 410%;  
-            }
-            .TextVelikost{
-                font-size: 150%; 
-            }
             .TextVSekci{
                 color: white;
-               /* font-size: 150%; */
+                font-size: 150%; 
                 margin: 2rem;
                 margin-top: 1rem;
-                text-align: justify;
             }
             .TlacVSekci{ 
                 font-size: 280%;
@@ -493,236 +483,8 @@
                     pointer-events: none;
                     user-select: none;
             }
-            .Bila{color: white;}
 
             #UvodniDIV{
-                width: 80%;
-                background-color: var(--tmavaBarva);
-                display: flex;
-                justify-content: flex-start;
-                align-items: center;
-                flex-direction: column;
-                min-height: 100vh;
-                padding-inline: 2rem;
+                
             }
-            #UvodniDIV p{
-                margin-block: 2rem;
-            }
-            #Nadpis{
-                font-size: 450%;
-            }
-            #PrvotniPopis{
-                font-size: 120%;
-                color: white;
-            }
-            .UvodniDIV{
-                width: 80%;
-                background-color: #000000;
-                opacity: 0.7;
-                padding: 1rem;
-                display: flex;
-                flex-direction: column;
-                border-radius: 2rem;
-                margin-block: 1rem;
-            }
-            #NaTextDIV{
-                color: #000000;
-                width: 100%;
-                min-height: 100vh;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                padding-top: 2rem;
-            }
-            .ZuzenyDIV{
-                width: 90%;
-                display: flex;
-                flex-direction: column;
-                padding-inline: 2rem;
-                border-radius: 2rem;
-                margin-block: 0.5rem;
-                justify-content: center;
-                align-items: center;
-                scroll-snap-align: start;
-                min-height: 100vh;
-            }
-            .ZuzenyText{
-                margin-inline: 2rem;
-                margin-block: 1rem;
-                text-align: justify;
-            }
-            .ZuzenyTlac{
-                background-color: transparent;
-                border-style: dashed;
-                border-color: white;
-                border-width: 5px;
-                /*padding: 0;*/
-            }
-            .ZuzenyTlac:hover{
-               padding-inline: 1.5rem;
-            }
-            .ZuzenyPodDIV{
-                width: 80%;
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                /*gap: 3rem;*/
-            }
-           /* .ZuzenyText{
-                margin-block-start: 5rem;
-                margin-block-end: 0;
-            }*/
-            .ZuzenyFotoDIV{
-                max-height: 80vh;
-                padding: 1rem;
-                min-width: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-            .ZuzenyFoto{
-                max-height: 60vh;
-            }
-            .ZuzenyPodTlac{
-                /*background-color: #000000;
-               /* border: solid var(--oranzova);*/
-                border-left: 4rem solid var(--oranzova);
-                border-right: 4rem solid var(--oranzova);
-                border-bottom: 4rem solid black;
-                border-top: 0;
-                padding: 0;
-                margin: 0;
-                width: 0;
-                height: 0;
-                /*transform: rotate(-90deg);*/
-                position: relative;
-                display: flex;
-            }
-            .ZuzenyPodTlac::before{
-                border-left: 5rem solid var(--oranzova);
-                border-right: 5rem solid var(--oranzova);
-                border-bottom: 5rem solid var(--seda);
-                border-top: 0;
-                padding: 0;
-                margin: 0;
-                width: 6rem;
-                height: 6rem;
-                position: absolute;
-                content: "ahojda";
-                left: 0;
-                z-index: 11;
-            }
-            .TlacLevo{
-                transform: rotate(-90deg);
-            }
-            .TlacPravo{
-                transform: rotate(90deg);
-            }
-            .MinimalniVyska{
-                min-height: 100vh;
-            }
-            .ZobrazeniDIV{
-                margin: 1rem;
-                padding-inline: 1rem;
-            }
-            .ZobrazeniTlac{
-                padding-inline: 0.5rem;
-                margin-inline: 0.5rem;
-                background-color: transparent;
-                border-color: white;
-                border-style: dashed;
-            }
-            .ZobrazeniTlac:hover{
-                border-color: var(--seda);
-                color: var(--seda);
-                transition-duration: 0.5s;
-            } .ZobrazeniTlac:not(:hover){transition-duration: 0.3s;}
-
-            .FotoDIV{
-                width: 100%;
-                background-color: var(--oranzova);
-                min-height: 100vh;
-               /* border-style: solid;*/
-                scroll-snap-align: start;
-                position: relative;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                overflow: hidden;
-            }
-            .FotkaPodDIV{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            #FotkovyDIV{
-                width: 100%;
-                scroll-snap-type: both;
-            }
-            .Fotka{
-               /* min-height: 70vh;
-                max-height: 80vh;*/
-                width: 45vw;
-                height: 45vw;
-                transform: /*translateX(-20vw)*/ rotate(-5deg);
-            }
-            .FotkaNadpis{
-                color: white;
-                font-size: 350%;
-                text-align: center;
-                margin: 0;
-                transform: translateY(-60%);
-            }
-            .FotkaPopis{
-                color: rgb(0, 0, 0);
-                margin: 3rem;
-                font-size: 150%;
-                padding-inline: 3rem;
-                text-align: justify;
-            }
-            .FotkaDatum{
-                /*transform: rotate(-10deg) translateY(-20vh) translateX(32vw);*/
-                font-style: oblique;
-                font-size: 150%;
-                color: black;
-            }
-            .ZuzenyTlacVelikost{
-                font-size: 190%;
-            }
-            .OranzovaPozadi{background-color: var(--oranzova);}
-            .ModraPozadi{background-color: var(--programBarva);}
-            .CervenaPozadi{background-color: var(--cervena);}
-            .ZelenaPozadi{background-color: var(--zelena);}
-            .RuzovaPozadi{background-color: var(--hryBarva);}
-
-            #SeznamSouboruDIV{
-                width: 80%;
-               
-            }
-            .SouborDIV{
-                margin-block: 1vh;
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-start;
-                gap: 5vw;
-                height: 3vh;
-            }
-            .Ikona{
-                height: 100%;
-                position: relative;
-            }
-            .SouborJmeno{
-                margin: 0;
-                font-size: 150%;
-                width: 30vw;
-            }
-            .SouborTlac{
-                margin: 0.2vh;
-                background-color: transparent;
-                border-style: dashed;
-            }
-            .SouborTlac:hover{
-                font-size: 102%;
-                transition-duration: 0.5s;
-            } .SouborTlac:not(:hover){transition-duration: 0.3s;}
+            

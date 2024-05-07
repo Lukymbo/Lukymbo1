@@ -229,7 +229,7 @@
 					top: 705px;
 					width: 145px;
 					height: 30px;
-					opacity: 0;
+					opacity: 1;
 					}
 	     </style>
      </head>
@@ -358,10 +358,16 @@
 				window.open("Bedny_bedna_sance.html","_blank");
 			}
 			
+			function obchod()
+			{			
+				window.open("Bedny_obchod.html","_self");
+			}
+			
 			function nuluj()
 			{			
 				localStorage.setItem("penize", "50");
 				localStorage.setItem("medaile", "0");
+				localStorage.setItem("odznaky", "0");
 				localStorage.setItem("klice1", "3");
 				localStorage.setItem("klice2", "5");
 				localStorage.setItem("klice3", "2");
@@ -373,6 +379,8 @@
 				document.getElementById('klice1').value = localStorage.getItem("klice1");
 				document.getElementById('klice2').value = localStorage.getItem("klice2");
 				document.getElementById('klice3').value = localStorage.getItem("klice3");
+				
+				document.getElementById('tlacitko7').disabled = true;
 			}
 	
 				
@@ -408,18 +416,21 @@
 					
 					localStorage.setItem("penize", "5000");
 					localStorage.setItem("medaile", "10");
+					localStorage.setItem("odznaky", "5");
 					localStorage.setItem("klice1", "10");
 					localStorage.setItem("klice2", "10");
 					localStorage.setItem("klice3", "10");
 					localStorage.setItem("klice4", "10");
 					localStorage.setItem("klice5", "10");
 					localStorage.setItem("klice6", "10");
+				
 					
 					document.getElementById('penize').value = localStorage.getItem("penize");
 					document.getElementById('klice1').value = localStorage.getItem("klice1");
 					document.getElementById('klice2').value = localStorage.getItem("klice2");
 					document.getElementById('klice3').value = localStorage.getItem("klice3");
 					
+					document.getElementById('tlacitko7').disabled = false;
 				}
 			}
 			

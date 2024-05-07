@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+ <html>
+     <head>
+	 
+         <title> Lukymbo.cz  </title>   	 
+         <meta http-equiv="content-type" content="text/html;charset=utf-8">
+		 
+		 <link rel="stylesheet" type="text/css" href="lukymbocz.css" /> 
+
+         <style>    
+	     </style>
+     </head>
+     <body>
+
+        <div id="HlavniDIV" style="background-color: black;">
+
+           <!-- <div id="PouzivaciDIV">-->
+                <div id="NavigacniDIV">
+                    <div id="NavigacniLogoDIV">
+                        <p class="Fontik BarvaNapisu">Lukymbo</p>
+                        <p id="" class="Fontik BarvaCz">.cz</p>
+                    </div>
+                    <div id="NavigacniKlikaciDIV"> 
+                        <p class="NavigacniMoznost Fontik">Domů</p>
+                        <p class="NavigacniMoznost Fontik">Programy</p>
+                        <p class="NavigacniMoznost Fontik">Videa</p>
+                        <p class="NavigacniMoznost Fontik">Videa</p>
+                        <p class="NavigacniMoznost Fontik">Videa</p>
+                    </div>    
+                </div>
+                <input type="button" id="NavigacniTlac">
+                <div class="URL2 SekceDIV Fontik">
+                    <div class="UvodniDIV">
+                        <p id="" class="NadpisVSekci NadpisVelikost PG">Moje programy</p>
+                        <p id="" class="TextVSekci TextVelikost">Programování mě vždy bavilo a programů jsem už za ta léta vytvořil spoustu. Některé jako zadání od různých učitelů, některé jako výplod moji hlavy v nudných chvilkách.</p>
+                    </div>
+                </div>
+                <div id="NaTextDIV">
+                    <div class="ZuzenyDIV Fontik ModraPozadi">
+                        <p class="ZuzenyNadpis NadpisVelikost NadpisVSekci">Já a programování</p>
+                        <p class="ZuzenyText TextVelikost">Když mi bylo zhruba 11 let tak pro mě slovo programování znělo velmi přitažlivě. Ten fakt, že bych si mohl vytvořit vlastní hru by nadchnul snad každého pořádnéh hráče her, který neví o programování téměř nic.</p>
+                        <p class="ZuzenyText TextVelikost">Začal jsem tedy chodit na kroužek výpočetní techniky a 2 roky se učil zacházet s základnímy programy jako Microsfot Word, Excel a Powerpoint nebo Malování. (Bylo mi 11 co chcete)</p>
+                        <p class="ZuzenyText TextVelikost"></p>
+                        <p class="ZuzenyText TextVelikost"></p>
+                        <p class="ZuzenyText TextVelikost"></p>
+                        <p class="ZuzenyText TextVelikost"></p>
+                        <p class="ZuzenyText TextVelikost"></p>
+                        <input type="button" class="ZuzenyTlac Bila TlacVSekci Fontik Pravo" value="Přejít na instagram">
+                    </div>
+                    <div class="ZuzenyDIV Fontik ModraPozadi">
+                        <p class="ZuzenyNadpis NadpisVelikost NadpisVSekci">Všechny soubory</p>
+                        <div id="SeznamSouboruDIV"></div>
+                    </div>
+                </div>
+        </div>
+        
+        <script type="text/javascript" src="lukymbocz.js"></script>
+
+	    <script type="text/javascript">
+
+
+            const vsechnysouborynazvy = [["Bedny_obchod.html", "V"],["NakrmSiMatesovou.html","H"],["Bednyv4","H"]]
+                const pocetvsechsouboru = vsechnysouborynazvy.length;
+
+
+            ridicipanel();
+
+            function ridicipanel(){
+
+                for(let i = 0; i < pocetvsechsouboru; i++){
+                    stvor1(i);
+                    stvor2(i);
+                    stvor3(i);
+                    stvor5(i);
+                    stvor4(i);
+                }
+            }
+
+            function stvor1(cislosouboru){
+
+                let pocetproid = "SouborDIV" + (cislosouboru + 1); 
+
+                let ulozsem = document.getElementById("SeznamSouboruDIV");
+
+                let novydiv = document.createElement("div");
+
+                    if(!lichesude(cislosouboru)){
+                        novydiv.style.backgroundColor = "#07cdff";
+                    }else{
+                        novydiv.style.backgroundColor = "#083f4d";
+                        novydiv.style.color = "white";
+                    }
+
+                    novydiv.id = pocetproid;
+
+                    novydiv.classList.add("SouborDIV");
+                    novydiv.classList.add("Fontik");
+
+                    //novydiv.onclick = otevri(cislosouboru);
+
+                ulozsem.appendChild(novydiv);
+            }
+
+            function stvor2(cislosouboru){
+
+                let pocetproid = "SouborIkona" + (cislosouboru + 1); 
+
+                let kam = "SouborDIV" + (cislosouboru + 1);
+                    let ulozsem = document.getElementById(kam);
+
+                let novyimg = document.createElement("img");
+
+                    let ikona = vsechnysouborynazvy[cislosouboru][1];
+                    if(ikona == "V"){
+                        novyimg.src= "./foto/programovani/vyvojova.png";
+                        novyimg.title = "Vývojová verze";
+                    }else{
+                        novyimg.src= "./foto/programovani/hotova.png";
+                        novyimg.title = "Hotová verze";}
+
+                    novyimg.id = pocetproid;
+
+                    novyimg.classList.add("Ikona");
+
+
+                ulozsem.appendChild(novyimg);
+            }
+
+            function stvor3(cislosouboru){
+
+                let pocetproid = "SouborJmeno" + (cislosouboru + 1); 
+
+                let kam = "SouborDIV" + (cislosouboru + 1);
+                    let ulozsem = document.getElementById(kam);
+
+                let novyp = document.createElement("p");
+
+                    novyp.innerHTML = vsechnysouborynazvy[cislosouboru][0];                    
+
+                    novyp.id = pocetproid;
+
+                    novyp.classList.add("SouborJmeno");
+
+                ulozsem.appendChild(novyp);
+            }
+
+            function stvor4(cislosouboru){
+
+                let pocetproid = "SouborTlac" + (cislosouboru + 1); 
+
+                let kam = "SouborDIV" + (cislosouboru + 1);
+                    let ulozsem = document.getElementById(kam);
+
+                let novyinput = document.createElement("input");
+
+                if(lichesude(cislosouboru)){
+                    novyinput.style.color = "white";
+                    novyinput.style.borderColor = "white";
+                }
+                    novyinput.type = "button";
+
+                    novyinput.value = "Otevřít na nové kartě";                  
+
+                    novyinput.id = pocetproid;
+
+                    novyinput.classList.add("SouborTlac");
+                    novyinput.classList.add("Fontik");
+
+                    novyinput.onclick = function(){ window.open(vsechnysouborynazvy[cislosouboru][0],"_blank");};
+
+                ulozsem.appendChild(novyinput);
+            }
+
+            function stvor5(cislosouboru){
+
+                let pocetproid = "SouborTlac0" + (cislosouboru + 1); 
+
+                let kam = "SouborDIV" + (cislosouboru + 1);
+                    let ulozsem = document.getElementById(kam);
+
+                let novyinput = document.createElement("input");
+
+                if(lichesude(cislosouboru)){
+                    novyinput.style.color = "white";
+                    novyinput.style.borderColor = "white";
+                }
+                    novyinput.type = "button";
+
+                    novyinput.value = "Otevřít";                  
+
+                    novyinput.id = pocetproid;
+
+                    novyinput.classList.add("SouborTlac");
+                    novyinput.classList.add("Fontik");
+
+                    novyinput.onclick = function(){ window.open(vsechnysouborynazvy[cislosouboru][0],"_self");};
+
+                ulozsem.appendChild(novyinput);
+            }
+
+            function lichesude(cislo){
+                if(cislo % 2 == 1){
+                    return 1;}
+                else{return 0;}
+            }
+            
+		 </script>
+     </body>
+</html>	 

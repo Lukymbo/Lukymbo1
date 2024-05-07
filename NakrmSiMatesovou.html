@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+ <html>
+     <head>
+	 
+         <title> Nakrm si Matesovou </title>   	 
+         <meta http-equiv="content-type" content="text/html;charset=utf-8">
+		 
+		 
+
+         <style>    
+		    #Polohovac
+			{
+			width: 100%;
+			height: 100%;
+			margin: 0px;
+			border: 0px;
+			padding: 0px;
+			z-index: 1;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			}
+			#Pohlreich
+			{
+			 width: 50px;
+			 height: 50px;
+			 z-index: 10;
+			 position: absolute;
+			 top: 0px;
+			 left: 0px;
+			}
+			#klikr
+			{
+			width: 100%;
+			height: 1000px;
+			opacity: 0;
+			z-index: 1;
+			
+			}
+			#zac
+			 { width: 200px;
+			   height: 50px;
+			   z-index: 2;
+			   position: absolute;
+			   left: 0px;
+			   top: 60px;
+			 
+			 }
+			#kon
+			 { width: 200px;
+			   height: 50px;
+			   z-index: 2;
+			   position: absolute;
+			   left: 0px;
+			   top: 120px;
+			 
+			 }
+			 #volnost
+			 { position: absolute;
+			   left: 400px;
+			 
+			 }
+			 #Vidlicka {
+			 width:50px;
+			 height: 50px;
+             z-index: 9;
+             position: absolute;
+             left: 0px;
+             top: 0px;
+			 opacity: 100%;
+			 }
+			 #Rizek {
+			 width:100px;
+			 height: 100px;
+             z-index: 8;
+             position: absolute;
+             left: 0px;
+             top: 0px;
+			 opacity: 100%;
+			 }
+			 #Mates {
+             z-index: 8;
+             position: absolute;
+			 opacity: 100%;
+			 }
+			 #MatesHam {
+             z-index: 7;
+             position: absolute;
+			 }
+			 
+			#pole {
+			 width: 55px;
+			 height: 40px;
+             z-index: 9;
+             position: absolute;
+             left: 414px;
+             top: 476px;
+			 opacity: 0%;
+			 }
+
+
+	     </style>
+     </head>
+     <body>
+	 
+	        <img src="nic.png" id="Pohlreich">
+			<img src="./mates/mates5.png" id="Mates" onmousemove="zacatek(event)">
+			<img src="./mates/mates6.png" id="MatesHam" onclick="">
+			<img src="./mates/vidlicka.png" id="Vidlicka">
+			<img id="Rizek">
+			<div id="pole" onclick="mnam()" onmousemove="zacatek(event)"></div>
+			
+			<audio id="zvuk"> <source src="./mates/chramst.mp3" type="audio/wav"> </audio>
+
+	       <div id="Polohovac" onmousemove="zacatek(event)"></div>
+	
+			<p id="volnost"> </p> 
+		 
+	 
+	     <script type="text/javascript">
+		  //var opakovac = setInterval(zjisti, 3000);		 
+		  
+		  document.getElementById('Mates').style.width = "1000px";
+		  document.getElementById('Mates').style.height = "1000px";
+		  
+		  document.getElementById('MatesHam').style.width = "1000px";
+		  document.getElementById('MatesHam').style.height = "1000px";
+		  
+		  document.getElementById('Mates').style.left = "-50px";
+		  document.getElementById('Mates').style.top = "-50px";
+		  
+		  document.getElementById('MatesHam').style.left = "23px";
+		  document.getElementById('MatesHam').style.top = "-18px";
+		  
+		  var rozsir = 50;
+		  
+		document.getElementById('Rizek').src="./mates/rizek1.png";
+		  
+		 function zjisti(event)
+         {
+
+			 var CursorX = window.gloubl.clientX;
+			 var CursorY = window.gloubl.clientY;
+			 
+			 
+			 
+			// var CursorXpx = CursorX + 'px';
+			// var CursorYpx = CursorY + 'px';
+			 
+			// var CursorW = document.getElementById('Pohlreich').style.width;
+			// var CursorH = document.getElementById('Pohlreich').style.height;
+			 
+			// alert(CursorW);
+
+			 var CursorXpx = (CursorX - (1 * 0)) + 'px';
+			 var CursorYpx = (CursorY - (1 * 0)) + 'px';
+			 
+			 var Cursor1Xpx = (CursorX - (50 * 1)) + 'px';
+			 var Cursor1Ypx = (CursorY - (50 * 1)) + 'px';
+			 
+			 window.ocasL = CursorXpx;
+			 window.ocasT = CursorYpx;
+			  
+			 
+			 document.getElementById('Vidlicka').style.left = CursorXpx;
+			 document.getElementById('Vidlicka').style.top = CursorYpx;
+			 
+			 document.getElementById('Rizek').style.left = Cursor1Xpx;
+			 document.getElementById('Rizek').style.top = Cursor1Ypx;
+			 
+			
+			 
+		 }		
+         function zacatek(event)		
+		 {
+	 
+			 window.gloubl = event
+			 
+			 var deleeej = setTimeout( zjisti, 1)
+
+		   }
+		  
+		  function mnam	()
+			{
+				//if(document.getElementById('Rizek').style.opacity == 0){
+			
+					document.getElementById('zvuk').currentTime = 0;
+					document.getElementById('zvuk').play();
+					
+					document.getElementById('MatesHam').style.top = "-12px";
+					window.setTimeout(mnam2 , 80);
+					//}
+			}
+		   function mnam2	()
+			{
+			window.setTimeout(mnam3 , 80);
+			document.getElementById('MatesHam').style.top = "-6px";
+		    }
+			function mnam3	()
+			{
+			window.setTimeout(mnam4 , 80);
+			document.getElementById('MatesHam').style.top = "0px";
+		    }
+			function mnam4	()
+			{
+			window.setTimeout(mnam5 , 80);
+			document.getElementById('MatesHam').style.top = "6px";
+		    }
+			function mnam5	()
+			{
+			window.setTimeout(mnam6 , 70);
+			document.getElementById('MatesHam').style.top = "0px";
+		    }
+			function mnam6	()
+			{
+			window.setTimeout(mnam7 , 70);
+			document.getElementById('MatesHam').style.top = "-6px";
+		    }
+			function mnam7	()
+			{
+			window.setTimeout(mnam8 , 80);
+			document.getElementById('MatesHam').style.top = "-12px";
+		    }
+			function mnam8	()
+			{
+			document.getElementById('Rizek').style.opacity = 0;
+			document.getElementById('MatesHam').style.top = "-18px";
+			
+			var pusa = document.getElementById('MatesHam').style.left;
+				var pusaX = pusa.replace('px','');
+				
+				var novapusa = (pusaX * 1) - (rozsir * 0.52); 
+					var novapusaPX = novapusa + "px";
+				
+						document.getElementById('MatesHam').style.left = novapusaPX;
+				
+			var pavla = document.getElementById('Mates').style.left;
+				var pavlaX = pavla.replace('px','');
+				
+				var novapavla = (pavlaX * 1) - (rozsir * 0.5); 
+					var novapavlaPX = novapavla + "px";
+				
+						document.getElementById('Mates').style.left = novapavlaPX;
+				
+			var sirka = document.getElementById('Mates').style.width;
+				var sirkaX = sirka.replace('px','');
+				
+				var novasirka = (sirkaX * 1) + (rozsir * 1); 
+					var novasirkaPX = novasirka + "px";
+				
+						document.getElementById('Mates').style.width = novasirkaPX;
+			
+			var sirka0 = document.getElementById('MatesHam').style.width;
+				var sirka0X = sirka0.replace('px','');
+				
+					var novasirka0 = (sirka0X * 1) + (rozsir * 1.22); 
+						var novasirka0PX = novasirka0 + "px";
+				
+							document.getElementById('MatesHam').style.width = novasirka0PX;
+			
+			
+			window.setTimeout(mnam9 , 60);
+		    }
+			function mnam9	()
+			{
+			window.setTimeout(mnam10 , 60);
+			document.getElementById('Polohovac').innerHTML = "Další řízek za 3";
+		    }
+			function mnam10	()
+			{
+			window.setTimeout(mnam11 , 60);
+			document.getElementById('Polohovac').innerHTML = "Další řízek za 2";
+		    }
+			function mnam11	()
+			{
+			window.setTimeout(mnam12 , 60);
+			document.getElementById('Polohovac').innerHTML = "Další řízek za 1";
+		    }
+			function mnam12	()
+			{			
+			document.getElementById('Polohovac').innerHTML = "";
+				 var Min = '0';
+				 var Max = '100';
+				 var nahodnee = Math.round (Math.random() * (Max - Min)  + Min); 
+
+				 if(nahodnee <="33.33"){document.getElementById('Rizek').src="./mates/rizek1.png";}
+				 if(nahodnee >"33.33" && nahodnee <="66.66"){document.getElementById('Rizek').src="./mates/rizek2.png";}
+				 if(nahodnee >"66.66"){document.getElementById('Rizek').src="./mates/rizek3.png";}
+				
+			window.setTimeout(mnam13 , 60);
+		    }
+			function mnam13	()
+			{
+				document.getElementById('Rizek').style.opacity = 1;
+		    }
+		 
+		 </script>
+     </body>
+</html>	 
